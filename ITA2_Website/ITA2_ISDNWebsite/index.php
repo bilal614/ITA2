@@ -12,6 +12,7 @@ and open the template in the editor.
     <body>
         <?php
         echo '<a href="ITA1_Backup/index.html">My ITA1 website</a>';
+        echo "Hello Bilal";
        ?>
     </body>
 </html>
