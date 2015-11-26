@@ -2,15 +2,15 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("home/home.html");  });
+            $("#container").load("webpage/home/home.html");  });
         $("a.explorenl").click(function () {
-            $("#container").load("explore/explorenl.html");	}); 
+            $("#container").load("webpage/explore/explorenl.html");	}); 
         $("a.culture").click(function () {
-            $("#container").load("explore/culture.html");    });    
+            $("#container").load("webpage/explore/culture.html");    });    
         $("a.transport").click(function () {
-            $("#container").load("explore/publictransport.html");    });    
+            $("#container").load("webpage/explore/publictransport.html");    });    
         $("a.weather").click(function () {
-            $("#container").load("explore/weather.html");    });  
+            $("#container").load("webpage/explore/weather.html");    });  
     })
 </script>
 <div id = "navLinkContainer">

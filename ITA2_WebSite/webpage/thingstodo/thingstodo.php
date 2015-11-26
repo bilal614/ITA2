@@ -1,15 +1,15 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("home/home.php");  });
+            $("#container").load("webpage/home/home.php");  });
         $("a.thingstodo").click(function () {
-            $("#container").load("thingstodo/thingstodo.php");	});
+            $("#container").load("webpage/thingstodo/thingstodo.php");	});
         $("a.food").click(function () {
-            $("#container").load("thingstodo/food.php");	}); 
+            $("#container").load("webpage/thingstodo/food.php");	}); 
         $("a.shopping").click(function () {
-            $("#container").load("thingstodo/shopping.php");	}); 
+            $("#container").load("webpage/thingstodo/shopping.php");	}); 
         $("a.cycling").click(function () {
-            $("#container").load("thingstodo/cycling.php");	}); 
+            $("#container").load("webpage/thingstodo/cycling.php");	}); 
     })
 </script>
 <div id = "navLinkContainer">

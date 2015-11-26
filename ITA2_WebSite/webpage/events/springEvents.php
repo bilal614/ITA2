@@ -5,13 +5,13 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-                    $("#container").load("home/home.php");  });
+                    $("#container").load("webpage/home/home.php");  });
         $("a.event").click(function() {
-                    $("#container").load("events/events.php"); });
+                    $("#container").load("webpage/events/events.php"); });
         $("div.Keukenhof").click(function () {
-            $("#container").load("events/Keukenhof.php");  });
+            $("#container").load("webpage/events/Keukenhof.php");  });
         $("div.Easter").click(function () {
-            $("#container").load("events/Easter.php");  });
+            $("#container").load("webpage/events/Easter.php");  });
     })
 </script>
     

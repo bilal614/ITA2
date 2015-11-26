@@ -1,9 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("home/home.html");  });
+            $("#container").load("webpage/home/home.html");  });
         $("a.explorenl").click(function () {
-        $("#container").load("explore/explorenl.html");	}); 
+        $("#container").load("webpage/explore/explorenl.html");	}); 
     })
 </script>
 <div id = "navLinkContainer">

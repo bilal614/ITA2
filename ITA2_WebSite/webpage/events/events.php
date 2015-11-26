@@ -1,17 +1,17 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("home/home.php");  });
+            $("#container").load("webpage/home/home.php");  });
         $("a.summer").click(function () {
-            $("#container").load("events/summerEvents.php");	});
+            $("#container").load("webpage/events/summerEvents.php");	});
         $("a.autumn").click(function () {
-            $("#container").load("events/autumnEvents.php");	}); 
+            $("#container").load("webpage/events/autumnEvents.php");	}); 
         $("a.winter").click(function () {
-            $("#container").load("events/winterEvents.php");	}); 
+            $("#container").load("webpage/events/winterEvents.php");	}); 
         $("a.spring").click(function () {
-            $("#container").load("events/springEvents.php");	});
+            $("#container").load("webpage/events/springEvents.php");	});
         $("div.searchEvents").click(function () {
-            $("#container").load("events/searchForEvent.php");	});
+            $("#container").load("webpage/events/searchForEvent.php");	});
     })
 </script>
     <div id = "navLinkContainer">

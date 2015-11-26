@@ -6,13 +6,13 @@
     $(document).ready(function(){
         $.ajaxSetup({async:true});
         $("a.home").click(function () {
-                    $("#container").load("home/home.php");  });
+                    $("#container").load("webpage/home/home.php");  });
         $("a.event").click(function() {
-                    $("#container").load("events/events.php"); });
+                    $("#container").load("webpage/events/events.php"); });
         $("div.pinkpop").click(function () {
-            $("#container").load("events/PinkPop.php");  });
+            $("#container").load("webpage/events/PinkPop.php");  });
         $("div.kingday").click(function () {
-            $("#container").load("events/KingDay.php");  });
+            $("#container").load("webpage/events/KingDay.php");  });
     })
 </script>    
 <div id = "navLinkContainer">

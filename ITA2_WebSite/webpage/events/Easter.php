@@ -1,11 +1,11 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("home/home.php");  });
+            $("#container").load("webpage/home/home.php");  });
         $("a.event").click(function () {
-            $("#container").load("events/events.php");	}); 
+            $("#container").load("webpage/events/events.php");	}); 
         $("a.spring").click(function () {
-            $("#container").load("events/springEvents.php");	});
+            $("#container").load("webpage/events/springEvents.php");	});
     })
 </script>
 <div id = "navLinkContainer">

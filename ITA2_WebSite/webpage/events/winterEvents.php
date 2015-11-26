@@ -5,13 +5,13 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-                    $("#container").load("home/home.php");  });
+                    $("#container").load("webpage/home/home.php");  });
         $("a.event").click(function() {
-                    $("#container").load("events/events.php"); });
+                    $("#container").load("webpage/events/events.php"); });
         $("div.light").click(function () {
-            $("#container").load("events/LightFestival.php");  });
+            $("#container").load("webpage/events/LightFestival.php");  });
         $("div.newYear").click(function () {
-            $("#container").load("events/NewYear.php");  });
+            $("#container").load("webpage/events/NewYear.php");  });
     })
 </script>   
 <div id = "navLinkContainer">
