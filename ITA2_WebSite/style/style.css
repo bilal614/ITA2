@@ -1,3 +1,24 @@
+/*CSS for the sign-up page*/
+div#FormContainer
+{
+    width: 85%;
+    position: relative;
+}
+
+div#FormLeftDiv
+{
+    width: 70%;
+    position: relative;
+    padding: 5px;
+    float: left;
+}
+div#FormRightDiv
+{
+    width: 25%;
+    position: relative;
+    padding: 5px;
+    float: left;
+}
 /*CSS for the header*/
 div#Login
 {
