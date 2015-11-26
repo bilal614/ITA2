@@ -20,12 +20,7 @@ div#FormRightDiv
     float: left;
 }
 /*CSS for the header*/
-div#Login
-{
-    float: right;
-    right:30%;
-    position: relative;
-}
+
 div#mainContainer
 {
     width: 100%;
@@ -60,10 +55,10 @@ div#mainContainer > header
     padding: 20px 0px;
     background: rgba(255,255,255,0.8);
 }
-div#mainContainer > header > div
+div#mainContainer > header > div#leftLogo
 {
     position: relative;
-    left: 5%;
+    left: 8%;
     float: left;
     width: 15%;
 }
@@ -74,10 +69,39 @@ img#logo
 }
 #mainMenu {
     float: right;
-    width: 70%;
+    width: 50%;
     font-family: Helvetica;
 }
-
+div#Login
+{
+    float: right;
+    width:22%;
+    position: relative;
+    padding-top: 15px;
+}
+#btnLogin, #btnSignUp
+{
+    font-size: 20px;
+    font-family: Signika;
+    color: #E36D01;
+    width: 40%;
+    margin-left: 10px;
+    padding: 20px 10px;
+}
+#btnLogin, #btnSignUp:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+#btnSignUp
+{
+    background-color: #E36D01;
+    color: white;
+}
+#btnLogin:hover
+{
+    border-top: solid 2px #E36D01;
+    border-bottom: solid 2px #E36D01;
+}
 /* Menu CSS */#mainMenu,
 #mainMenu > ul {
   /*background: #14957C;*/
@@ -115,7 +139,7 @@ img#logo
     border-top-style: solid;
     border-top-color: #2D2D2F;
     border-top-width: 1px;
-    font-size: 23px;
+    font-size: 20px;
     text-decoration: none;
     line-height: 18px;
     font-weight: 600;
@@ -1334,3 +1358,4 @@ img.large {
     height:366px!important;
     width: 892px!important;
 }
+/**************************/

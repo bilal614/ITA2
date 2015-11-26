@@ -14,7 +14,7 @@
     <body>
         <div id="mainContainer">
             <header>
-                <div>
+                <div id="leftLogo">
                     <a href="index.php"><img id="logo" src="images/index/logo.png" alt="ISNL"></a>
                 </div>
                 <nav id = "mainMenu">
@@ -47,7 +47,12 @@
                         <li ><a class="contact" href="#Contact">Contact</a></li>
                     </ul>
                 </nav>  
-                <div id="Login">Put new login here!!Hey Thanh</div>
+                <div id="Login">
+                    <div>
+                         <a id="btnLogin">Login</a>
+                         <a id="btnSignUp">Sign up</a>
+                    </div>
+                </div>
             </header>  
         <div id="container">
             
