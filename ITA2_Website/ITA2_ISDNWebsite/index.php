@@ -11,7 +11,8 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        echo '<a href="ITA2_Files/index.php">Orginal ITA1 website</a>';
+        //echo '<a href="ITA2_Files/index.php">Orginal ITA1 website</a>';
+        echo '<a href = "ITA1_Backup/idex.html">My ITA website</a>'
        ?>
     </body>
 </html>
