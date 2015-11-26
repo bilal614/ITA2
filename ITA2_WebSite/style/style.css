@@ -1,4 +1,10 @@
 /*CSS for the header*/
+div#Login
+{
+    float: right;
+    right:1.5%;
+    position: relative;
+}
 div#mainContainer
 {
     width: 100%;

@@ -46,7 +46,7 @@
                         </li>
                         <li ><a class="contact" href="#Contact">Contact</a></li>
                     </ul>
-                    <div id="mainMenu">Put new login here!!Hey Thanh</div>
+                    <div id="Login">Put new login here!!Hey Thanh</div>
                 </nav>  
             </header>  
         <div id="container">
