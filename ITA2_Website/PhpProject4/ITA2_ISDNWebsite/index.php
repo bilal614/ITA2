@@ -12,6 +12,7 @@ and open the template in the editor.
     <body>
         <?php
         echo '<a href="ITA2_Files/index.php">Orginal ITA1 website</a>';
+        echo 'Hello Thanh';
        ?>
     </body>
 </html>
