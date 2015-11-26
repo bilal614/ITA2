@@ -36,7 +36,7 @@ div#mainContainer > header
 div#mainContainer > header > div
 {
     position: relative;
-    left: 15%;
+    left: 5%;
     float: left;
     width: 15%;
 }
@@ -58,7 +58,8 @@ img#logo
     margin: 0px auto;
     padding: 0;
     position: relative;
-    
+    left: 2.5%;
+    float: left;
 }
 #mainMenu:before,
 #mainMenu:after,
