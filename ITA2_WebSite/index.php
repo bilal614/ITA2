@@ -10,6 +10,10 @@
             <script src="jquery/jquery-2.1.4.js" type="text/javascript"></script>
             <script type="text/javascript" src="script/script.js">
             </script> 
+            <link rel="stylesheet" 
+                href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         </head>
     <body>
         <div id="mainContainer">
@@ -51,6 +55,22 @@
                     <div>
                          <a id="btnLogin">Login</a>
                          <a id="btnSignUp">Sign up</a>
+                    </div>
+                </div>
+                <div id="LoginSuccess">
+                    <div>
+                        <div class="user-image-wrapper">
+                            <img class="user-image" src="images/index/user.png">
+                        </div>
+                        <div class="dropdown" id="name-wrapper">
+                            <div class="dropdown-toggle user-name-style"  data-toggle="dropdown">user name
+                            <span class="caret"></span></div>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Favorite events</a></li>
+                              <li><a href="#">Your profile</a></li>
+                              <li><a id="btnLogOut" href="#">Log out</a></li> 
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </header>  
