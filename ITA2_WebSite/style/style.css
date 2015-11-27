@@ -239,7 +239,7 @@ div#Login
 div#container 
 {
     width: auto;
-    min-height: 700px;
+    min-height: 500px;
     max-height: 1500px;
 }
 div.innercontainer{
@@ -1358,4 +1358,79 @@ img.large {
     height:366px!important;
     width: 892px!important;
 }
-/**************************/
+/***********LOGIN FORM***************/
+.loginMain
+{
+    position: relative;
+}
+.login-form {
+    margin: 7% auto 4%;
+    width: 30%;
+}
+.login-form {
+    background: white;
+}
+.login-form  h1 {
+    padding-top: 23%;
+}
+.login-form  h1 {
+    font-size: 25px;
+    color: #676767;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+    padding-top: 19%;
+    text-align: center;
+}
+
+.login-form .head {
+    position: absolute;
+    top: -15%;
+    left: 45%;
+}
+.login-form .head img {
+    border-radius: 50%;
+    border: 6px solid rgba(221, 218, 215, 0.23);
+}
+.login-form img {
+    max-width: 100%;
+}
+.login-form  form {
+    width: 80%;
+    margin: 0px auto;
+    padding: 6% 0px 9%;
+}
+.login-form input[type="submit"] {
+    width: 99%;
+    padding: 3%;
+    margin-bottom: 8%;
+    background: #E36D01;
+    font-family: "Open Sans",sans-serif;
+    color: white;
+    font-size: 20px;
+    outline: medium none;
+    border: medium none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.5s ease 0s;
+}
+.login-form p {
+    text-align: center;
+}
+.login-form form p a {
+    color: #888;
+    font-family: "Open Sans",sans-serif;
+}
+.login-form input[type="text"], input[type="password"], input[type="password"] {
+    text-align: left;
+    position: relative;
+    width: 92%;
+    padding: 5% 3%;
+    background: #D3D3D3;
+    margin-bottom: 9%;
+    font-family: "Open Sans",sans-serif;
+    color: #676767;
+    font-weight: 600;
+    font-size: 16px;
+    outline: medium none;
+    border: 1px solid #DED6D6;
+}
