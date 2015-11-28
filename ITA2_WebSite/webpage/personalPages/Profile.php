@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,10 +9,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>ISDN website</title>
             <meta name="homepage" content="An interactive guide for events in NL for students.">
-            <link href="style/style.css" type="text/css" rel="stylesheet"/>
-            <script src = "jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
-            <script src="jquery/jquery-2.1.4.js" type="text/javascript"></script>
-            <script type="text/javascript" src="script/script.js">
+            <link href="../../style/style.css" type="text/css" rel="stylesheet"/>
+            <script src = "../../jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
+            <script src="../../jquery/jquery-2.1.4.js" type="text/javascript"></script>
+            <script type="text/javascript" src="../../script/script.js">
             </script> 
             <link rel="stylesheet" 
                 href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -19,7 +23,7 @@
         <div id="mainContainer">
             <header>
                 <div id="leftLogo">
-                    <a href="index.php"><img id="logo" src="images/index/logo.png" alt="ISNL"></a>
+                    <a href="index.php"><img id="logo" src="../../images/index/logo.png" alt="ISNL"></a>
                 </div>
                 <nav id = "mainMenu">
                      <ul>
@@ -51,10 +55,23 @@
                         <li ><a class="contact" href="#Contact">Contact</a></li>
                     </ul>
                 </nav>  
-                <div id="Login">
+                <div id="LoginSuccess">
                     <div>
-                         <a id="btnLogin">Login</a>
-                         <a id="btnSignUp">Sign up</a>
+                        <div class="user-image-wrapper">
+                            <img class="user-image" src="../../images/index/user.png">
+                        </div>
+                        <div class="dropdown" id="name-wrapper">
+                            <div class="dropdown-toggle user-name-style"  data-toggle="dropdown">
+                                <?php
+                                echo $_SESSION['username'];
+                                ?>
+                            <span class="caret"></span></div>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Favorite events</a></li>
+                              <li><a href="#">Your profile</a></li>
+                              <li><a id="btnLogOut" href="#">Log out</a></li> 
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </header>  

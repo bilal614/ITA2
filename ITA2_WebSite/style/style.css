@@ -114,7 +114,7 @@ div#LoginSuccess
     width:22%;
     position: relative;
     margin-top: -5px;
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 div#LoginSuccess:hover
 {

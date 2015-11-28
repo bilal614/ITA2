@@ -32,12 +32,13 @@ $(document).ready(function(){
         $("#container").load("webpage/contact/contact.php");	});
      $("#btnLogin").click(function (){
         $("#container").load("signIn.php"); });
+    
+    
        });
        
-
- function login() {
-        alert("Submit button clicked!");
-        $("#Login").slideUp().hide(); 
-        $("#LoginSuccess").slideDown().show();
-        return true;
-    }
+// function login() {
+//        alert("Submit button clicked!");
+//        $("#Login").slideUp().hide(); 
+//        $("#LoginSuccess").slideDown().show();
+//        return true;
+//    
