@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    $("#container").load("webpage/home/home.php");
     $("a.home").click(function () {
         $("#container").load("webpage/home/home.php");});
     $("a.exploreNL").click(function () {
@@ -29,16 +28,5 @@ $(document).ready(function(){
     $("a.winterEvent").click(function () {
         $("#container").load("webpage/events/winterEvents.php");	});
     $("a.contact").click(function () {
-        $("#container").load("webpage/contact/contact.php");	});
-     $("#btnLogin").click(function (){
-        $("#container").load("signIn.php"); });
-    
-    
+        $("#container").load("webpage/contact/contact.php");	});   
        });
-       
-// function login() {
-//        alert("Submit button clicked!");
-//        $("#Login").slideUp().hide(); 
-//        $("#LoginSuccess").slideDown().show();
-//        return true;
-//    

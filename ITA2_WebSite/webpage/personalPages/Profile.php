@@ -1,5 +1,11 @@
 <?php
     session_start();
+    
+    //User can be in that page if and only if they login
+    if(!isset($_SESSION['username']))
+    {
+        header("Location: ../../signIn.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +75,7 @@
                             <ul class="dropdown-menu">
                               <li><a href="#">Favorite events</a></li>
                               <li><a href="#">Your profile</a></li>
-                              <li><a id="btnLogOut" href="#">Log out</a></li> 
+                              <li><a id="btnLogOut" href="../../logOut.php">Log out</a></li> 
                             </ul>
                         </div>
                     </div>
