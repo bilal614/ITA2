@@ -1,6 +1,6 @@
 <header>
     <div id="leftLogo">
-        <a href="index.php"><img id="logo" src="images/index/logo.png" alt="ISNL"></a>
+        <a href="index.php"><img id="logo" src="templates/images/index/logo.png" alt="ISNL"></a>
     </div>
     <nav id = "mainMenu">
          <ul>

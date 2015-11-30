@@ -20,7 +20,7 @@
                 <a class="exploreNL" href="#ExploreNL" >
                     <div class="desc">EXPLORE NETHERLANDS</div>
                 <div>
-                    <img id="explore" src="images/index/explore_pic.jpg"
+                    <img id="explore" src="templates/images/index/explore_pic.jpg"
                           alt="Explore NL" >
                 </div>
                 </a>
@@ -30,7 +30,7 @@
                 <a class="thingstodo" href="#Things to do" >
                     <div class="desc">THINGS TO DO</div>
                 <div>
-                    <img id="toDo" src="images/index/toDo_pic.jpg"
+                    <img id="toDo" src="templates/images/index/toDo_pic.jpg"
                           alt="Things To Do" >
                 </div>
                 </a>
@@ -42,7 +42,7 @@
                 <div class="desc">Upcoming Events</div>
                 <div class="eventsIndex">
                     <div>
-                        <img id="upcomingevents" src="images/index/upcoming1.jpg"
+                        <img id="upcomingevents" src="templates/images/index/upcoming1.jpg"
                     alt="Upcoming Events" >
                     </div>
                     <div class = "eventTitle">
@@ -57,7 +57,7 @@
                 </div>
                 <div class="eventsIndex">
                     <div>
-                        <img id="upcomingevents" src="images/index/upcoming2.jpg"
+                        <img id="upcomingevents" src="templates/images/index/upcoming2.jpg"
                         alt="Upcoming Events">
                     </div>
                     <div class = "eventTitle">
