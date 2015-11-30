@@ -1,6 +1,11 @@
+
 <header>
     <div id="leftLogo">
-        <a href="index.php"><img id="logo" src="templates/images/index/logo.png" alt="ISNL"></a>
+        <a href="index.php"><img id="logo" 
+            src="<?php
+                echo $config["paths"]["images"]["index"]."/logo.png";
+            ?>" alt="ISNL">
+        </a>
     </div>
     <nav id = "mainMenu">
          <ul>
@@ -34,7 +39,8 @@
     </nav>  
     <div id="Login">
         <div>
-            <a id="btnLogin" href="signIn.php">Login</a>
+            <a id="btnLogin" href="webpage/privatePages/signIn.php">Login
+            </a>
              <a id="btnSignUp">Sign up</a>
         </div>
     </div>

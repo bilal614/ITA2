@@ -1,11 +1,11 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("webpage/home/home.php");  });
+            $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.event").click(function () {
-            $("#container").load("webpage/events/events.php");	}); 
+            $("#container").load("webpage/publicPages/events/events.php");	}); 
         $("a.spring").click(function () {
-            $("#container").load("webpage/events/springEvents.php");	});
+            $("#container").load("webpage/publicPages/events/springEvents.php");	});
     })
 </script>
 <div id = "navLinkContainer">
@@ -26,7 +26,7 @@
         <div class="eventPTitle">Easter in Netherlands</div>
         <div class="greyline"></div>
         <div class="timeLocation"></div>
-        <div class="eventPic"><img src="images/events/Spring/SpringEaster.jpg"></div>
+        <div class="eventPic"><img src="templates/images/events/Spring/SpringEaster.jpg"></div>
         <div class="orangeLineE"></div>
     </div>
    

@@ -1,9 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("webpage/home/home.html");  });
+            $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.explorenl").click(function () {
-        $("#container").load("webpage/explore/explorenl.html");	}); 
+        $("#container").load("webpage/publicPages/explore/explorenl.php");	}); 
     })
 </script>
 <div id = "navLinkContainer">
@@ -25,7 +25,7 @@
 </div>
 <div id="UpperRow">
     <div id="PTleftcol">
-        <img src="images/explore/NLrailmap.jpg" width="612" height="288">
+        <img src="templates/images/explore/NLrailmap.jpg" width="612" height="288">
     </div>
     <div id="PTrightcol">
         <div id="usefulLinks">Useful Links</div>

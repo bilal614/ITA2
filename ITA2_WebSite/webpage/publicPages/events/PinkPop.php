@@ -1,11 +1,11 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("webpage/home/home.php");  });
+            $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.event").click(function () {
-            $("#container").load("webpage/events/events.php");	}); 
+            $("#container").load("webpage/publicPages/events/events.php");	}); 
         $("a.summer").click(function () {
-            $("#container").load("webpage/events/summerEvents.php");	});
+            $("#container").load("webpage/publicPages/events/summerEvents.php");	});
     })
 </script>
 <div id = "navLinkContainer">
@@ -26,7 +26,7 @@
         <div class="eventPTitle">PINKPOP</div>
         <div class="greyline"></div>
         <div class="timeLocation"></div>
-        <div class="eventPic"><img src="images/events/Summer/pinkPop.jpg"></div>
+        <div class="eventPic"><img src="templates/images/events/Summer/pinkPop.jpg"></div>
         <div class="orangeLineE"></div>
     </div>
    

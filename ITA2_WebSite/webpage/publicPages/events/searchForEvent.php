@@ -53,7 +53,7 @@ href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
             <div class="carousel-inner" role="listbox">
               <div class="item active">
                   <div class="event1 sevstyle">
-                       <a href="#Film"><img src="images/events/Autumn/autumn5.jpg" alt="Film"></a>
+                       <a href="#Film"><img src="templates/images/events/Autumn/autumn5.jpg" alt="Film"></a>
 
                         <div class="eclassCaption" class="Desc">
                             <div class="orangeLine"></div>
@@ -63,7 +63,7 @@ href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
                         </div>
                   </div>
                   <div class="event2 sevstyle">
-                       <a href="#Film"><img src="images/events/Autumn/autumn4.jpg" alt="Film"></a>
+                       <a href="#Film"><img src="templates/images/events/Autumn/autumn4.jpg" alt="Film"></a>
 
                         <div class="eclassCaption" class="Desc">
                             <div class="orangeLine"></div>

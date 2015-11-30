@@ -5,13 +5,13 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-                    $("#container").load("webpage/home/home.php");  });
+                    $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.event").click(function() {
-                    $("#container").load("webpage/events/events.php"); });
+                    $("#container").load("webpage/publicPages/events/events.php"); });
         $("div.light").click(function () {
-            $("#container").load("webpage/events/LightFestival.php");  });
+            $("#container").load("webpage/publicPages/events/LightFestival.php");  });
         $("div.newYear").click(function () {
-            $("#container").load("webpage/events/NewYear.php");  });
+            $("#container").load("webpage/publicPages/events/NewYear.php");  });
     })
 </script>   
 <div id = "navLinkContainer">
@@ -41,7 +41,7 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="item active light">
-              <a href="#Light"><img src="images/events/Winter/winter3.jpg" alt="Light" ></a>
+              <a href="#Light"><img src="templates/images/events/Winter/winter3.jpg" alt="Light" ></a>
             <div class="classCaption" class="Desc">
                 <div class="captionTitle">Amsterdam Light Festival</div>
                 <div class="timeLocation">27 Nov-1 Feb  | Amsterdam</div>
@@ -49,7 +49,7 @@
             </div>
           </div>
           <div class="item newYear">
-              <a href="#Scheveningen"><img src="images/events/Winter/winter1.jpg" alt="Scheveningen" 
+              <a href="#Scheveningen"><img src="templates/images/events/Winter/winter1.jpg" alt="Scheveningen" 
                                            ></a>
                 <div class="classCaption" class="Desc">
                     <div class="captionTitle">Scheveningen New Year's Dive</div>

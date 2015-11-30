@@ -1,13 +1,13 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.exploreNL").click(function () {
-            $("#container").load("webpage/explore/explorenl.html");  });
+            $("#container").load("webpage/publicPages/explore/explorenl.php");  });
         $("a.thingstodo").click(function () {
-        $("#container").load("webpage/thingstodo/thingstodo.html");	}); 
+        $("#container").load("webpage/publicPages/thingstodo/thingstodo.php");	}); 
         $("a.film").click(function () {
-            $("#container").load("webpage/events/FilmFestival.html");  });
+            $("#container").load("webpage/publicPages/events/FilmFestival.php");  });
         $("a.pgallery").click(function () {
-            $("#container").load("webpage/events/PortraitGallery.html");  });
+            $("#container").load("webpage/publicPages/events/PortraitGallery.php");  });
     })
 </script>
     <div id = "slogan">

@@ -5,13 +5,13 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-                    $("#container").load("webpage/home/home.php");  });
+                    $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.event").click(function() {
-                    $("#container").load("webpage/events/events.php"); });
+                    $("#container").load("webpage/publicPages/events/events.php"); });
         $("div.film").click(function () {
-            $("#container").load("webpage/events/FilmFestival.php");  });
+            $("#container").load("webpage/publicPages/events/FilmFestival.php");  });
         $("div.pgallery").click(function () {
-            $("#container").load("webpage/events/PortraitGallery.php");  });
+            $("#container").load("webpage/publicPages/events/PortraitGallery.php");  });
     })
 </script>    
 <div id = "navLinkContainer">
@@ -42,7 +42,7 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="item active film">
-              <a href="#Film"><img src="images/events/Autumn/autumn5.jpg" alt="Film"></a>
+              <a href="#Film"><img src="templates/images/events/Autumn/autumn5.jpg" alt="Film"></a>
             <div class="classCaption" class="Desc">
                 <div class="captionTitle">Netherlands Film Festival</div>
                 <div class="timeLocation">23 Sept| Utrecht</div>
@@ -50,7 +50,7 @@
             </div>
           </div>
           <div class="item pgallery">
-              <a href="#"><img src="images/events/Autumn/autumn4.jpg" alt="Portrait" ></a>
+              <a href="#"><img src="templates/images/events/Autumn/autumn4.jpg" alt="Portrait" ></a>
                 <div class="classCaption" class="Desc">
                     <div class="captionTitle">Portrait Gallery</div>
                     <div class="timeLocation">9 Nov - 31 Dec | Amsterdam</div>

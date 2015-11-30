@@ -1,9 +1,9 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("webpage/home/home.html");  });
+            $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.explorenl").click(function () {
-        $("#container").load("webpage/explore/explorenl.html");	}); 
+        $("#container").load("webpage/publicPages/explore/explorenl.php");	}); 
     })
 </script>
 <div id = "navLinkContainer">
@@ -11,7 +11,7 @@
     <div>
         <ul id="navLink">
             <li></li>
-            <li class="preActive"><a class="home" href="#Homm">Home</a><span></span></li>
+            <li class="preActive"><a class="home" href="#Home">Home</a><span></span></li>
             <li class="preActive"><a class="explorenl" href="#ExploreNL">Explore NL</a><span></span>
             </li>
             <li class="activeLinkNav"><a href="#">Culture</a><span></span></li>

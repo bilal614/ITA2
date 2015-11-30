@@ -6,13 +6,13 @@
     $(document).ready(function(){
         $.ajaxSetup({async:true});
         $("a.home").click(function () {
-                    $("#container").load("webpage/home/home.php");  });
+                    $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.event").click(function() {
-                    $("#container").load("webpage/events/events.php"); });
+                    $("#container").load("webpage/publicPages/events/events.php"); });
         $("div.pinkpop").click(function () {
-            $("#container").load("webpage/events/PinkPop.php");  });
+            $("#container").load("webpage/publicPages/events/PinkPop.php");  });
         $("div.kingday").click(function () {
-            $("#container").load("webpage/events/KingDay.php");  });
+            $("#container").load("webpage/publicPages/events/KingDay.php");  });
     })
 </script>    
 <div id = "navLinkContainer">
@@ -42,7 +42,7 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="item active pinkpop">
-              <a href="#PINKPOP"><img src="images/events/Summer/pinkPop.jpg" alt="PINKPOP" ></a>
+              <a href="#PINKPOP"><img src="templates/images/events/Summer/pinkPop.jpg" alt="PINKPOP" ></a>
             <div class="classCaption" class="Desc">
                 <div class="captionTitle">PINKPOP</div>
                 <div class="timeLocation">10 JUN - 12 JUN | Landgraaf</div>
@@ -52,7 +52,7 @@
             </div>
           </div>
           <div class="item kingday">
-              <a href="#King's Day"><img src="images/events/Summer/kingsDay.jpg" alt="King's Day" 
+              <a href="#King's Day"><img src="templates/images/events/Summer/kingsDay.jpg" alt="King's Day" 
                                            ></a>
                 <div class="classCaption" class="Desc">
                     <div class="captionTitle">King's Day in the Netherlands</div>

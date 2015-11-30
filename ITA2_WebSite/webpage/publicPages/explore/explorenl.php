@@ -2,15 +2,15 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("webpage/home/home.html");  });
+            $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.explorenl").click(function () {
-            $("#container").load("webpage/explore/explorenl.html");	}); 
+            $("#container").load("webpage/publicPages/explore/explorenl.php");	}); 
         $("a.culture").click(function () {
-            $("#container").load("webpage/explore/culture.html");    });    
+            $("#container").load("webpage/publicPages/explore/culture.php");    });    
         $("a.transport").click(function () {
-            $("#container").load("webpage/explore/publictransport.html");    });    
+            $("#container").load("webpage/publicPages/explore/publictransport.php");    });    
         $("a.weather").click(function () {
-            $("#container").load("webpage/explore/weather.html");    });  
+            $("#container").load("webpage/publicPages/explore/weather.php");    });  
     })
 </script>
 <div id = "navLinkContainer">
@@ -29,7 +29,7 @@
         <div class="leftcol">
             <div id="culture" class="greybox" >
                 <a class="culture" href="#" >
-                <div><img class="medium" src="images/explore/culture.jpg"
+                <div><img class="medium" src="templates/images/explore/culture.jpg"
                           alt="Food"></div>
                 </a>
                 <div class="orangeLine"></div>
@@ -39,7 +39,7 @@
         <div class="rightcol">
             <div id="weather" class="greybox">
                 <a class="weather" href="#" >
-                <div><img class="medium"  src="images/explore/weather.jpg"
+                <div><img class="medium"  src="templates/images/explore/weather.jpg"
                       alt="Shopping" ></div></a>
                 <div class="orangeLine"></div>
                 <div class="desc">Weather</div>
@@ -49,7 +49,7 @@
     <div class="bottomcol">
         <div id="publictransport" class="greybox" >
             <a class="transport" href="#" >
-            <div><img class="large" src="images/explore/publictransport.png"
+            <div><img class="large" src="templates/images/explore/publictransport.png"
                   alt="Cycling"  ></div></a>
             <div class="orangeLine"></div>
              <div class="desc">Public Transport</div>

@@ -18,7 +18,7 @@
            $_SESSION['email'] = $email;// stored user name into the section, this value can be passed page to page
            $_SESSION['username'] = USERNAME;
            //redirecting to Profile.php
-           header("Location: webpage/personalPages/Profile.php");
+           header("Location: Profile.php");
        }
     }
 ?>
@@ -30,9 +30,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>ISDN website</title>
             <meta name="homepage" content="An interactive guide for events in NL for students.">
-            <link href="style/style.css" type="text/css" rel="stylesheet"/>
-            <script src = "jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
-            <script src="jquery/jquery-2.1.4.js" type="text/javascript"></script>
+            <link href="../../templates/css/style.css" type="text/css" rel="stylesheet"/>
+            <script src = "../../js/jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
+    <script src="../../js/jquery/jquery-2.1.4.js" type="text/javascript"></script>
             <script type="text/javascript" src="script/loginScript.js">
             </script> 
             <link rel="stylesheet" 
@@ -43,14 +43,15 @@
     <body>
         <div id="mainContainer">
             <?php
-            include 'webpage\include\header.php';
+            include '..\..\config\config.php';
+            include '..\..\includes\subPages\header.php';
             ?>
         <div id="container">
             <div class="loginMain">
                 <div class="login-form">
                     <h1>Login</h1>
                     <div class="head">
-                        <img alt="" src="images/index/user.png">
+                        <img alt="" src="../../templates/images/index/user.png">
                     </div>
                     <form action = "signIn.php" method="post">
                         <input name = 'email' type="text" onblur="if (this.value == '') {this.value = 'Email';}" onfocus="this.value = '';" value="Email" class="text">
@@ -64,7 +65,7 @@
             </div>
         </div><!--end div#Container!-->
             <?php
-            include 'webpage\include\footer.php';
+            include '..\..\includes\subpages\footer.php';
             ?>
     </div><!--end div#mainContainer!-->
     </body>

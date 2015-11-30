@@ -1,10 +1,10 @@
 <?php
     session_start();
     
-    //User can be in that page if and only if they login
+    //User can be in that page if and only if they login, other wise link them back to sign in
     if(!isset($_SESSION['username']))
     {
-        header("Location: ../../signIn.php");
+        header("Location: signIn.php");
     }
 ?>
 
@@ -15,10 +15,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>ISDN website</title>
             <meta name="homepage" content="An interactive guide for events in NL for students.">
-            <link href="../../style/style.css" type="text/css" rel="stylesheet"/>
-            <script src = "../../jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
-            <script src="../../jquery/jquery-2.1.4.js" type="text/javascript"></script>
-            <script type="text/javascript" src="../../script/script.js">
+            <link href="../../templates/css/style.css" type="text/css" rel="stylesheet"/>
+            <script src = "../../js/jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
+    <script src="../../js/jquery/jquery-2.1.4.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../js/script/script.js">
             </script> 
             <link rel="stylesheet" 
                 href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -29,7 +29,7 @@
         <div id="mainContainer">
             <header>
                 <div id="leftLogo">
-                    <a href="index.php"><img id="logo" src="../../images/index/logo.png" alt="ISNL"></a>
+                    <a href="index.php"><img id="logo" src="../../templates/images/index/logo.png" alt="ISNL"></a>
                 </div>
                 <nav id = "mainMenu">
                      <ul>
@@ -64,7 +64,7 @@
                 <div id="LoginSuccess">
                     <div>
                         <div class="user-image-wrapper">
-                            <img class="user-image" src="../../images/index/user.png">
+                            <img class="user-image" src="../../templates/images/index/user.png">
                         </div>
                         <div class="dropdown" id="name-wrapper">
                             <div class="dropdown-toggle user-name-style"  data-toggle="dropdown">
@@ -75,7 +75,7 @@
                             <ul class="dropdown-menu">
                               <li><a href="#">Favorite events</a></li>
                               <li><a href="#">Your profile</a></li>
-                              <li><a id="btnLogOut" href="../../logOut.php">Log out</a></li> 
+                              <li><a id="btnLogOut" href="logOut.php">Log out</a></li> 
                             </ul>
                         </div>
                     </div>

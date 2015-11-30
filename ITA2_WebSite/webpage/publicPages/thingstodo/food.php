@@ -1,9 +1,9 @@
 <script type="text/javascript">
         $(document).ready(function(){
             $("a.home").click(function () {
-                $("#container").load("webpage/home/home.php");  });
+                $("#container").load("webpage/publicPages/home/home.php");  });
             $("a.thingstodo").click(function () {
-            $("#container").load("webpage/thingstodo/thingstodo.php");	}); 
+            $("#container").load("webpage/publicPages/thingstodo/thingstodo.php");	}); 
         })
 </script>
 <div id = "navLinkContainer">
@@ -29,7 +29,7 @@
         <div id="AmstRest" class="picLink" >
             <a href="#" >
             <div class="RestPicLink"><img class="medium" 
-                  src="images/thingstodo/AmsterdamRest.jpg"
+                                          src="templates/images/thingstodo/AmsterdamRest.jpg"
                   alt="Amsterdam Restaurants" ></div></a>
             <div class="orangeLine"></div>
             <div class="RestDesc">10x Restaurants in Amsterdam</div>
@@ -41,7 +41,7 @@
         <div id="RotRest" class="picLink" >
             <a href="#" >
             <div class="RestPicLink"><img class="medium" 
-                  src="images/thingstodo/RotterdamRest.jpg"
+                                          src="templates/images/thingstodo/RotterdamRest.jpg"
                   alt="Rotterdam Restaurants" ></div></a>
             <div class="orangeLine"></div>
             <div class="RestDesc">10x Restaurants in Rotterdam</div>
@@ -56,7 +56,7 @@
                 <div id="EindRest" class="picLink" >
                     <a href="#" >
                     <div class="RestPicLink"><img class="small" 
-                    src="images/thingstodo/EindhovenRest.jpg"
+                                                  src="templates/images/thingstodo/EindhovenRest.jpg"
                     alt="Eindhoven Restaurants" ></div></a>
                         <div class="RestDesc">5x Restaurants in Eindhoven</div>
                     <p class="RestDetails">Explore the exuberant city of Eindhoven with its 
@@ -68,7 +68,7 @@
                 <div id="UtrRest" class="picLink" >
                     <a href="#" >
                     <div class="RestPicLink"><img class="small" 
-                    src="images/thingstodo/Utrecht.jpg"
+                                                  src="templates/images/thingstodo/Utrecht.jpg"
                     alt="Utrecht Restaurants" ></div></a>
                     <div class="RestDesc">10x Restaurants in Utrecht</div>
                     <p class="RestDetails">Discover the list of best restaurants in the 
@@ -80,7 +80,7 @@
                 <div id="HaagRest" class="picLink" >
                     <a href="#" >
                     <div class="RestPicLink"><img class="small" 
-                    src="images/thingstodo/HagueRest.jpg"
+                                                  src="templates/images/thingstodo/HagueRest.jpg"
                     alt="Den Haag Restaurants" ></div></a>
                     <div class="RestDesc">10x Restaurants in The Hague</div>
                     <p class="RestDetails">Discover the greatest restaurants in the lovely 

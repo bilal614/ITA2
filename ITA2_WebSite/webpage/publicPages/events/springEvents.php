@@ -5,13 +5,13 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-                    $("#container").load("webpage/home/home.php");  });
+                    $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.event").click(function() {
-                    $("#container").load("webpage/events/events.php"); });
+                    $("#container").load("webpage/publicPages/events/events.php"); });
         $("div.Keukenhof").click(function () {
-            $("#container").load("webpage/events/Keukenhof.php");  });
+            $("#container").load("webpage/publicPages/events/Keukenhof.php");  });
         $("div.Easter").click(function () {
-            $("#container").load("webpage/events/Easter.php");  });
+            $("#container").load("webpage/publicPages/events/Easter.php");  });
     })
 </script>
     
@@ -42,7 +42,7 @@
         <div class="carousel-inner" role="listbox">
 
           <div class="item active Keukenhof">
-              <a class="" href="#Keukenhof"><img  src="images/events/Spring/spring3.jpg" alt="Keukenhof" ></a>
+              <a class="" href="#Keukenhof"><img  src="templates/images/events/Spring/spring3.jpg" alt="Keukenhof" ></a>
             <div class="classCaption" class="Desc">
                 <div class="captionTitle">Keukenhof</div>
                 <div class="timeLocation">24 Mar-16 May  | Lisse</div>
@@ -50,7 +50,7 @@
             </div>
           </div>
           <div class="item Easter">
-              <a href="#Easter"><img src="images/events/Spring/SpringEaster.jpg" alt="Easter" 
+              <a href="#Easter"><img src="templates/images/events/Spring/SpringEaster.jpg" alt="Easter" 
                                           ></a>
                 <div class="classCaption" class="Desc">
                     <div class="captionTitle">Easter In Holland</div>

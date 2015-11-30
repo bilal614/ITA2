@@ -1,9 +1,9 @@
 <script type="text/javascript">
             $(document).ready(function(){
                 $("a.home").click(function () {
-                    $("#container").load("webpage/home/home.php");  });
+                    $("#container").load("webpage/publicPages/home/home.php");  });
                 $("a.thingstodo").click(function () {
-                $("#container").load("webpage/thingstodo/thingstodo.php");	}); 
+                $("#container").load("webpage/publicPages/thingstodo/thingstodo.php");	}); 
             })
 </script>
 <div id = "navLinkContainer">
@@ -22,7 +22,7 @@
     <div id="titleContainer">
         <div id="cycTitle">Cycling in the Netherlands</div>
         <div id="greyline"></div>
-        <div class="cyclingPic"><img class="large" src="images/thingstodo/cycling.jpg"></div>
+        <div class="cyclingPic"><img class="large" src="templates/images/thingstodo/cycling.jpg"></div>
     </div>
     <div id="CycUpperRow">
         <p >10 Reasons to explore Holland by bicycle</p>

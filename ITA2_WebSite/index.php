@@ -18,13 +18,14 @@
     <body>
         <div id="mainContainer">
             <?php
-            include 'includes\header.php';
+            include 'config\config.php';
+            include 'includes\subPages\header.php';
             ?>
         <div id="container">
             
         </div><!--end div#Container!-->
             <?php
-            include 'includes\footer.php';
+            include 'includes\subPages\footer.php';
             ?>
     </div><!--end div#mainContainer!-->
         

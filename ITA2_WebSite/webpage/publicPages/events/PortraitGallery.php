@@ -1,11 +1,11 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("webpage/home/home.php");  });
+            $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.event").click(function () {
-            $("#container").load("webpage/events/events.php");	}); 
+            $("#container").load("webpage/publicPages/events/events.php");	}); 
         $("a.autumn").click(function () {
-            $("#container").load("webpage/events/autumnEvents.php");	});
+            $("#container").load("webpage/publicPages/events/autumnEvents.php");	});
     })
 </script>
 <div id = "navLinkContainer">
@@ -26,7 +26,7 @@
         <div class="eventPTitle">Portrait Gallery of the Golden Age</div>
         <div class="greyline"></div>
         <div class="timeLocation"></div>
-        <div class="eventPic"><img src="images/events/Autumn/autumn4.jpg"></div>
+        <div class="eventPic"><img src="templates/images/events/Autumn/autumn4.jpg"></div>
         <div class="orangeLineE"></div>
     </div>
    

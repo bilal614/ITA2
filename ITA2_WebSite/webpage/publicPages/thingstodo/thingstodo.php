@@ -1,15 +1,15 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("webpage/home/home.php");  });
+            $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.thingstodo").click(function () {
-            $("#container").load("webpage/thingstodo/thingstodo.php");	});
+            $("#container").load("webpage/publicPages/thingstodo/thingstodo.php");	});
         $("a.food").click(function () {
-            $("#container").load("webpage/thingstodo/food.php");	}); 
+            $("#container").load("webpage/publicPages/thingstodo/food.php");	}); 
         $("a.shopping").click(function () {
-            $("#container").load("webpage/thingstodo/shopping.php");	}); 
+            $("#container").load("webpage/publicPages/thingstodo/shopping.php");	}); 
         $("a.cycling").click(function () {
-            $("#container").load("webpage/thingstodo/cycling.php");	}); 
+            $("#container").load("webpage/publicPages/thingstodo/cycling.php");	}); 
     })
 </script>
 <div id = "navLinkContainer">
@@ -28,7 +28,7 @@
         <div class="leftcol">
             <div id="food" class="greybox" >
                 <a class="food" href="#" >
-                <div><img class="medium" src="images/thingstodo/food.jpg"
+                    <div><img class="medium" src="templates/images/thingstodo/food.jpg"
                           alt="Food"></div>
                 </a>
                 <div class="orangeLine"></div>
@@ -38,7 +38,7 @@
         <div class="rightcol">
             <div id="shopping" class="greybox">
                 <a class="shopping"href="#" >
-                <div><img class="medium" src="images/thingstodo/shopping.jpg"
+                    <div><img class="medium" src="templates/images/thingstodo/shopping.jpg"
                       alt="Shopping" ></div></a>
                 <div class="orangeLine"></div>
                 <div class="desc">Shopping</div>
@@ -48,7 +48,7 @@
     <div class="bottomcol">
         <div id="cycling" class="greybox" >
             <a class="cycling" href="#" >
-            <div><img class="large" src="images/thingstodo/cycling.jpg"
+                <div><img class="large" src="templates/images/thingstodo/cycling.jpg"
                   alt="Cycling"  ></div></a>
             <div class="orangeLine"></div>
             <div class="desc">Cycling</div>

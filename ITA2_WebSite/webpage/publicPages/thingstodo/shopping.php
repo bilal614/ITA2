@@ -1,9 +1,9 @@
    <script type="text/javascript">
             $(document).ready(function(){
                 $("a.home").click(function () {
-                    $("#container").load("webpage/home/home.php");  });
+                    $("#container").load("webpage/publicPages/home/home.php");  });
                 $("a.thingstodo").click(function () {
-                $("#container").load("webpage/thingstodo/thingstodo.php");	}); 
+                $("#container").load("webpage/publicPages/thingstodo/thingstodo.php");	}); 
             })
     </script>
         <div id = "navLinkContainer">
@@ -29,7 +29,7 @@
                 <div id="AmstShop" class="picLink" >
                     <a href="#" >
                     <div class="ShopPicLink"><img class="medium" 
-                          src="images/thingstodo/shopping/amsterdam.jpg"
+                                                  src="templates/images/thingstodo/shopping/amsterdam.jpg"
                           alt="Amsterdam Shops" ></div></a>
                     <div class="orangeLine"></div>
                     <div class="ShopDesc">Shopping in Amsterdam</div>
@@ -42,7 +42,7 @@
                 <div id="RotShop" class="picLink" >
                     <a href="#" >
                     <div class="ShopPicLink"><img class="medium" 
-                          src="images/thingstodo/shopping/rotterdam.jpg"
+                                                  src="templates/images/thingstodo/shopping/rotterdam.jpg"
                           alt="Rotterdam Shops"  ></div></a>
                     <div class="orangeLine"></div>
                     <div class="ShopDesc">Shopping in Rotterdam</div>
@@ -56,7 +56,7 @@
                         <div id="MasShop" class="picLink" >
                             <a href="#" >
                             <div class="ShopPicLink"><img class="medium" 
-                            src="images/thingstodo/shopping/maastricht.jpg"
+                                                          src="templates/images/thingstodo/shopping/maastricht.jpg"
                             alt="Maastricht Shops" ></div></a>
                             <div class="orangeLine"></div>
                             <div class="ShopDesc">Shopping in Maastricht</div>
@@ -69,7 +69,7 @@
                         <div id="UtrShop" class="picLink" >
                             <a href="#" >
                             <div class="ShopPicLink"><img class="medium" 
-                            src="images/thingstodo/shopping/utrecht.jpg"
+                                                          src="templates/images/thingstodo/shopping/utrecht.jpg"
                             alt="Utrecht Shops"  ></div></a>
                             <div class="orangeLine"></div>
                             <div class="ShopDesc">Shopping in Utrecht</div>

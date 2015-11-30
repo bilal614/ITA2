@@ -1,11 +1,11 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("home/home.php");  });
+            $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.event").click(function () {
-            $("#container").load("events/events.php");	}); 
+            $("#container").load("webpage/publicPages/events/events.php");	}); 
         $("a.winter").click(function () {
-            $("#container").load("events/winterEvents.php");	});
+            $("#container").load("webpage/publicPages/events/winterEvents.php");	});
     })
 </script>
 <div id = "navLinkContainer">
@@ -26,7 +26,7 @@
         <div class="eventPTitle">Scheveningen New Year’s Dive</div>
         <div class="greyline"></div>
         <div class="timeLocation"></div>
-        <div class="eventPic"><img src="images/events/Winter/winter1.jpg"></div>
+        <div class="eventPic"><img src="templates/images/events/Winter/winter1.jpg"></div>
         <div class="orangeLineE"></div>
     </div>
    

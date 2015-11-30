@@ -1,17 +1,17 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $("a.home").click(function () {
-            $("#container").load("webpage/home/home.php");  });
+            $("#container").load("webpage/publicPages/home/home.php");  });
         $("a.summer").click(function () {
-            $("#container").load("webpage/events/summerEvents.php");	});
+            $("#container").load("webpage/publicPages/events/summerEvents.php");	});
         $("a.autumn").click(function () {
-            $("#container").load("webpage/events/autumnEvents.php");	}); 
+            $("#container").load("webpage/publicPages/events/autumnEvents.php");	}); 
         $("a.winter").click(function () {
-            $("#container").load("webpage/events/winterEvents.php");	}); 
+            $("#container").load("webpage/publicPages/events/winterEvents.php");	}); 
         $("a.spring").click(function () {
-            $("#container").load("webpage/events/springEvents.php");	});
+            $("#container").load("webpage/publicPages/events/springEvents.php");	});
         $("div.searchEvents").click(function () {
-            $("#container").load("webpage/events/searchForEvent.php");	});
+            $("#container").load("webpage/publicPages/events/searchForEvent.php");	});
     })
 </script>
     <div id = "navLinkContainer">
@@ -30,7 +30,7 @@
             <div class="leftcol">
                 <div id="summer" class="greybox">
                     <a class="summer" href="#" >                                    
-                    <div><img class="medium" src="images/events/summer.jpg"
+                    <div><img class="medium" src="templates/images/events/summer.jpg"
                               alt="Summer"></div></a>
                     <div class="orangeLine"></div>
                     <div class="desc">Summer Events</div>
@@ -40,7 +40,7 @@
                 <div id="spring" class="greybox">
                     <a class="spring" href="#" >
 
-                    <div><img class="medium" src="images/events/spring.jpg"
+                    <div><img class="medium" src="templates/images/events/spring.jpg"
                           alt="Spring" ></div></a>
                     <div class="orangeLine"></div>
                     <div class="desc">Spring Events</div>
