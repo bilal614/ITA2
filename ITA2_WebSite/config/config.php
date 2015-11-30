@@ -20,8 +20,12 @@ $config = array(
     ),
     "paths" => array(
         "images" => array(
-            "index" => "/ITA2Website/templates/images/index",
-            "explore" => "/ITA2Website/templates/images/explore"
+            "FromIndex" => "templates/images/index",
+            "FromPrivatePages" => "../../templates/images/index",   
+        ),
+        "home" => array(
+            "FromIndex" => "index.php",
+            "FromPrivatePages" => "../../index.php",
         )
     )
 );

@@ -44,7 +44,7 @@
         <div id="mainContainer">
             <?php
             include '..\..\config\config.php';
-            include '..\..\includes\subPages\header.php';
+            include '..\..\includes\subPages\loginheader.php';
             ?>
         <div id="container">
             <div class="loginMain">
