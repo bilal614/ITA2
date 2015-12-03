@@ -29,7 +29,7 @@
             usual rituals that bog down other cultures. For example you can trust a Dutchie 
             to tell it like it really is – and always stand firm on a matter. You might not 
             notice this straightaway; indeed it may even take a few years. To give you a 
-            head start, we've compiled ten favourite Dutch habits, traits and well-
+            head start, we have compiled ten favorite Dutch habits, traits and well-
             practiced foibles.
             </p></div>
     </div>

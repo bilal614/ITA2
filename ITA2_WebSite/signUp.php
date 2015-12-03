@@ -1,43 +1,71 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>
-            <link href="style/style.css" type="text/css" rel="stylesheet"/>
-        </title>
-    </head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ISDN website</title>
+            <meta name="homepage" content="An interactive guide for events in NL for students.">
+            <link href="templates/css/style.css" type="text/css" rel="stylesheet"/>
+            <script src = "js/jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
+    <script src="js/jquery/jquery-2.1.4.js" type="text/javascript"></script>
+            <script type="text/javascript" src="script/loginScript.js">
+            </script> 
+            <link rel="stylesheet" 
+                href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+            <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+            <script src="js/jquery-validation-1.14.0/dist/jquery.validate.js"></script>
+            <!--<script> 
+                function validateForm(){
+                    var firstName=document.forms["signupform"]["firstname"].value;
+                    var lastName=document.forms["signupform"]["lastname"].value;
+                    var eMail= document.forms["signupform"]["email"].value;
+                    var passWord=document.forms["signupform"]["password"].value;
+                    var confirmPass=document.forms["signupform"]["confirmpassword"].value;
+                    //if(firsName==null || firstName=="" || lastName==null || lastName="" || eMail==null || eMail="" || passWord==null || passWord="" || confirmPass==null || confirmPass=="")
+                    //{
+                    //    alert("Please enter all the information in the form"); return false;
+                    //}
+                    //else if(passWord!=confirmPass)
+                    //{alert("Password and confrim password do not match.");return false;}
+                    if(firstName==null || firstName==""){alert("Please enter name."); return false;}
+                }
+            </script>!-->
+        </head>
     <body>
-        <div id="FormContainer">
-            <div id="FormLeftDiv">
-        <form id="" action="example" method="post" >
-            <fieldset name="SignUpForm">
-                <div id="FormLeftDiv">
-                    First Name:<br>
-                    <input type="text" name="firsName"><br>
-                    Last Name: <br>
-                    <input type="text" name="lastName"><br>
-                    E-Mail:<br>
-                    <input type="text" name="email"><br><br>
-                    Password:<br>
-                    <input text="password" name="passWord"><br>
-                    Confirm Password:<br>
-                    <input text="password" name="confirmPassword"><br>
+        <div id="mainContainer">
+            <?php
+                include 'config\config.php';
+                include 'includes\subPages\signUpHeader.php';
+            ?>
+            <div id="container">
+                <div class="login-form">
+                    <h1>Sign Up</h1>
+                    <form id="signupform" onsubmit="return validateForm()" action="example" method="post" >
+                        <fieldset name="SignUpForm">
+                            <label for="firstName" value="First Name">First Name: </label>
+                            <input type="text" name="firsname" onfocus="this.value='';" value="First Name" required><br>
+                            
+                            <label for="lastName">Last Name: </label>
+                            <input type="text" name="lastname" onfocus="this.value=''" value="Last Name" required><br>
+                            
+                            <label for="email" onfocus="this.value='';" value="Email">E-Mail: </label> 
+                            <input type="text" name="email" onfocus="this.value=''" value="Email" required><br>
+                            
+                            <label for="passWord">Password: </label><br>
+                            <input type="password" name="password" required><br>
+                            
+                            <label for="confirmPassword">Confirm Password: </label>
+                            <input type="password" name="confirmpassword" required><br>
+                            
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">                  
+                        </fieldset>
+                    </form>
+                    <script>$("#signupform").validate();</script>
                 </div>
-                <div id="FormRightDiv">
-                    <input id="formSubmitBtn" type="submit" value="Submit">
-                    <input id="forResetBtn" type="reset" value="Reset">                    
-                </div>
-            </fieldset>
-        </form>
-        
+            </div>
         </div>
-        <?php
-        // put your code here
-        ?>
     </body>
 </html>
