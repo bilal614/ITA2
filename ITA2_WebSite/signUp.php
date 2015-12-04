@@ -15,29 +15,17 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
             <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-            <script src="js/jquery-validation-1.14.0/dist/jquery.validate.js"></script>
-            <!--<script> 
-                function validateForm(){
-                    var firstName=document.forms["signupform"]["firstname"].value;
-                    var lastName=document.forms["signupform"]["lastname"].value;
-                    var eMail= document.forms["signupform"]["email"].value;
-                    var passWord=document.forms["signupform"]["password"].value;
-                    var confirmPass=document.forms["signupform"]["confirmpassword"].value;
-                    //if(firsName==null || firstName=="" || lastName==null || lastName="" || eMail==null || eMail="" || passWord==null || passWord="" || confirmPass==null || confirmPass=="")
-                    //{
-                    //    alert("Please enter all the information in the form"); return false;
-                    //}
-                    //else if(passWord!=confirmPass)
-                    //{alert("Password and confrim password do not match.");return false;}
-                    if(firstName==null || firstName==""){alert("Please enter name."); return false;}
-                }
-            </script>!-->
+            <script src="js/jquery/jquery.validate.js"></script>
         </head>
     <body>
         <div id="mainContainer">
             <?php
                 include 'config\config.php';
                 include 'includes\subPages\signUpHeader.php';
+                $requiredFileds=array("firstname","lastname","email","password","confirmpassword")
+                //function validateForm(){
+                    
+                //}
             ?>
             <div id="container">
                 <div class="login-form">
@@ -45,7 +33,8 @@
                     <form id="signupform" onsubmit="return validateForm()" action="example" method="post" >
                         <fieldset name="SignUpForm">
                             <label for="firstName" value="First Name">First Name: </label>
-                            <input type="text" name="firsname" onfocus="this.value='';" value="First Name" required><br>
+                            <input type="text" name="firsname" onfocus="this.value='';" value="First Name" required
+                                   <?php ?>><br>
                             
                             <label for="lastName">Last Name: </label>
                             <input type="text" name="lastname" onfocus="this.value=''" value="Last Name" required><br>
@@ -53,10 +42,10 @@
                             <label for="email" onfocus="this.value='';" value="Email">E-Mail: </label> 
                             <input type="text" name="email" onfocus="this.value=''" value="Email" required><br>
                             
-                            <label for="passWord">Password: </label><br>
+                            <label for="password">Password: </label><br>
                             <input type="password" name="password" required><br>
                             
-                            <label for="confirmPassword">Confirm Password: </label>
+                            <label for="confirmpassword">Confirm Password: </label>
                             <input type="password" name="confirmpassword" required><br>
                             
                             <input type="submit" value="Submit">
