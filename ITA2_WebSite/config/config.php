@@ -15,9 +15,6 @@ $config = array(
             "host" => "localhost"
         )
     ),
-    "urls" => array(
-        "baseUrl" => ""
-    ),
     "paths" => array(
         "images" => array(
             "FromIndex" => "templates/images/index",
