@@ -18,11 +18,11 @@ $config = array(
     "paths" => array(
         "images" => array(
             "FromIndex" => "templates/images/index",
-            "FromPrivatePages" => "../../templates/images/index",   
+            "FromView" => "../../templates/images/index",   
         ),
         "home" => array(
             "FromIndex" => "index.php",
-            "FromPrivatePages" => "../../index.php",
+            "FromView" => "../../index.php",
         )
     )
 );
