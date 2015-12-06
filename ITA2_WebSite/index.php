@@ -1,3 +1,4 @@
+<?php require './config/config.php';?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,15 +18,30 @@
         </head>
     <body>
         <div id="mainContainer">
+           <header>
+                <div id="leftLogo">
+                    <a href="<?php echo $config ["paths"]["home"]["FromIndex"]?>"><img id="logo" 
+                        src="<?php
+                            echo $config["paths"]["images"]["FromIndex"]."/logo.png";
+                        ?>" alt="ISNL">
+                    </a>
+                </div>
+                <?php
+                        include './includes/View/mainMenu.php';
+                ?>
+                <div id="Login">
+                    <div>
+                        <a id="btnLogin" href="includes/View/signIn.view.php">Login
+                        </a>
+                         <a id="btnSignUp">Sign up</a>
+                    </div>
+                </div>
+            </header>   
+            <div id="container">
+                
+            </div>
             <?php
-            include 'config\config.php';
-            include 'includes\subPages\header.php';
-            ?>
-        <div id="container">
-            
-        </div><!--end div#Container!-->
-            <?php
-            include 'includes\subPages\footer.php';
+            include 'includes/View/footer.php';
             ?>
     </div><!--end div#mainContainer!-->
         
