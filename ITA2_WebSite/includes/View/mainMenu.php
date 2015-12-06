@@ -1,11 +1,11 @@
 <nav id = "mainMenu">
     <ul>
       <li>
-          <a class="exploreNL" href="#Explore NL">Explore NL</a>
+          <a class="exploreNL" href="webpage/explore/explorenl.php">Explore NL</a>
            <ul>
-               <li ><a class="culture" href="#Culture">Culture</a></li>
-               <li ><a class="transport" href="#Public transport">Public transport</a></li>
-               <li ><a class="weather" href="#Weather">Weather</a></li>
+               <li ><a class="culture" href="webpage/explore/culture.php">Culture</a></li>
+               <li ><a class="transport" href="webpage/explore/publictransport.php">Public transport</a></li>
+               <li ><a class="weather" href="webpage/explore/weather.php">Weather</a></li>
            </ul>
        </li>
        <li>

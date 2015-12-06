@@ -1,3 +1,4 @@
+<?php require '../Controller/phpFormValidation.php'?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,10 +18,7 @@
             <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
             <script src="../../js/jquery/jquery.validate.js"></script>
         </head>
-    <body>
-<<<<<<< HEAD:ITA2_WebSite/signUp.php
-        <div id="mainContainer">           
-=======
+    <body>  
         <div id="mainContainer">
             <?php
                 include '../../config/config.php';
@@ -30,7 +28,6 @@
                     
                 //}
             ?>
->>>>>>> 24b7196a40e11232dc37295567d475e9705e4ff7:ITA2_WebSite/includes/View/signUp.view.php
             <div id="container">
                 <div class="login-form">
                     <h1>Sign Up</h1>
