@@ -1497,7 +1497,7 @@ img.large {
     color: #888;
     font-family: "Open Sans",sans-serif;
 }
-.login-form input[type="text"],.login-form input[type="password"]  {
+.login-form input[type="text"],.login-form input[type="password"],.login-form input[type="email"]  {
     text-align: left;
     position: relative;
     width: 97%;
@@ -1510,4 +1510,7 @@ img.large {
     font-size: 16px;
     outline: medium none;
     border: 1px solid #DED6D6;
+}
+.error{
+    background: #d33; color:white; padding: 0.2em;
 }
