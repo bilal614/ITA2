@@ -50,8 +50,7 @@ $(function() {
                    .find("#container")
                    .fadeOut(200, function() {
                        $mainContent.hide().load(href + " #container", function() {
-                           $mainContent.fadeIn(200, function() {
-                              
+                           $mainContent.fadeIn(200, function() {       
                            });
                            $("#mainMenu a").removeClass("current");
                            console.log(href);
