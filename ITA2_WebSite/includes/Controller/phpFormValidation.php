@@ -8,18 +8,24 @@ and open the template in the editor.
         $requireFields=  array("firstname","lastname","password","confirmpassword");
         $missingFields=array();
             
-        //if(isset($_POST["submitButton"])){
-          //  foreach($requireFields as $requiredField){
-            //    if(!isset($_POST[$requiredField]) or !$_POST[$requiredField]){
-              //      $missingFields[]=$requiredField;
-                //}
-            //}
-        //}
+        if(isset($_POST["submitButton"])){
+          foreach($requireFields as $requiredField){
+            if(!isset($_POST[$requiredField]) or !$_POST[$requiredField]){
+              $missingFields[]=$requiredField;
+                }
+            }
+        }
                 
         
         function validateField($fieldName,$missingFields){
             if(in_array($fieldName, $missingFields)){
                 echo 'class="error"';
+            }
+        }
+        
+        function setValue($fieldName){
+            if(isset($_POST[$fieldName])){
+                echo 'value="'.$_POST[$fieldName].'"';
             }
         }
         
