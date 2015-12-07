@@ -33,37 +33,39 @@
 //    
 //       });
        
-$(function() {
-
-    if(Modernizr.history){
-
-    var $mainContent = $("#outContainer");
-    $("#mainMenu").delegate("a", "click", function() {
-        _link = $(this).attr("href");
-        history.pushState(null, null, _link);
-        loadContent(_link);
-        return false;
-    });
-
-    function loadContent(href){
-           $mainContent
-                   .find("#container")
-                   .fadeOut(200, function() {
-                       $mainContent.hide().load(href + " #container", function() {
-                           $mainContent.fadeIn(200, function() {       
-                           });
-                           $("#mainMenu a").removeClass("current");
-                           console.log(href);
-                           $("#mainMenu a[href$="+href+"]").addClass("current");
-                       });
-                   });
-       }
-    
-    $(window).bind('popstate', function(){
-       _link = location.pathname.replace(/^.*[\\\/]/, '');
-       loadContent(_link);
-    });
-
-} // otherwise, history is not supported, so nothing fancy here.
-});
-
+//$(function() {
+//
+//    if(Modernizr.history){
+//
+//    //var $mainContent = $("#outContainer");
+//    $("#mainMenu").delegate("a", "click", function() {
+//        _link = $(this).attr("href");
+//        history.pushState(null, null, _link);
+//        loadContent(_link);
+//        return false;
+//    });
+//
+//    function loadContent(href){
+////           $mainContent
+////                   .find("#container")
+////                   .fadeOut(200, function() {
+////                       $mainContent.hide().load(href + " #container", function() {
+////                           $mainContent.fadeIn(200, function() {       
+////                           });
+////                           $("#mainMenu a").removeClass("current");
+////                           console.log(href);
+////                           $("#mainMenu a[href$="+href+"]").addClass("current");
+////                       });
+////                   });
+//             $("#container").hide();
+//             $("#container").load("href");
+//       }
+//    
+//    $(window).bind('popstate', function(){
+//         _link = location.pathname();
+//       loadContent(_link);
+//    });
+//
+//    } // otherwise, history is not supported, so nothing fancy here.
+//});
+//

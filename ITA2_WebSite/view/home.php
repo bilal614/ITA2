@@ -1,15 +1,3 @@
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("a.exploreNL").click(function () {
-            $("#container").load("webpage/publicPages/explore/explorenl.php");  });
-        $("a.thingstodo").click(function () {
-        $("#container").load("webpage/publicPages/thingstodo/thingstodo.php");	}); 
-        $("a.film").click(function () {
-            $("#container").load("webpage/publicPages/events/FilmFestival.php");  });
-        $("a.pgallery").click(function () {
-            $("#container").load("webpage/publicPages/events/PortraitGallery.php");  });
-    })
-</script>
     <div id = "slogan">
         <p>What can you do in the Netherlands?</br>Find it here!!!</p>          
     </div>
@@ -17,7 +5,7 @@
         <div class="leftcolIndex">
             <div id="explore">
                 <div class ="orangeLine"></div>
-                <a class="exploreNL" href="#ExploreNL" >
+                <a class="exploreNL" href="explorenl.php" >
                     <div class="desc">EXPLORE NETHERLANDS</div>
                 <div>
                     <img id="explore" src="templates/images/index/explore_pic.jpg"
@@ -27,7 +15,7 @@
             </div>
             <div id="toDo">
                 <div class ="orangeLine"></div>
-                <a class="thingstodo" href="#Things to do" >
+                <a class="thingstodo" href="thingstodo.php" >
                     <div class="desc">THINGS TO DO</div>
                 <div>
                     <img id="toDo" src="templates/images/index/toDo_pic.jpg"
