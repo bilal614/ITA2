@@ -1,6 +1,8 @@
 <?php
     session_start();
+    require '../model/DBConnection.php';
     //constants for example values, will be removed after set up a real databases
+    
     define('EMAIL','thanhhnk@gmail.com');
     define('PASSWORD','1234');
     define('USERNAME','thanhhnk');;

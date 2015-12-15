@@ -1,0 +1,11 @@
+CREATE DATABASE ita2;
+USE ita2;
+/*Create tables and contraints*/
+CREATE TABLE itaUsers(
+	email	varchar(64) NOT NULL,
+	password varchar(16) NOT NULL 
+); 
+ALTER TABLE itaUsers ADD CONSTRAINT itaUsersPK PRIMARY KEY(email);
+
+INSERT INTO itaUsers(email,password) VALUES('bilalbutt.614@gmail.com','bilal123');
+INSERT INTO itaUsers(email,password) VALUES('thanhnk123@gmail.com', 'thanh123');
