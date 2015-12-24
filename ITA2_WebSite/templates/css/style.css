@@ -1514,3 +1514,35 @@ img.large {
 .error{
     background: #d33; color:white; padding: 0.2em;
 }
+/*Add events as favorite events*/
+div.addFavorite
+{
+    height: 50px;
+    width: 400px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    display: inline-block;
+    background-color: #E36D01;
+}
+div.addFavorite > a
+{
+    font-size: 18px;
+    font-family: Tahoma;    
+    color: #F5F5F5;
+    width: 80%;
+    float: left;
+    
+}
+div.addFavorite > span
+{
+  
+    height: 100%;
+    width: 20%;
+    float: right;
+    background-image: url("../images/events/add.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    margin-top: 5px;
+}

@@ -50,6 +50,7 @@
                            <li ><a class="autumnEvent" href="view/autumnEvents.php">Autumn events</a></li>
                            <li ><a class="winterEvent" href="view/winterEvents.php">Winter events</a></li>
                            <li ><a class="springEvent" href="view/springEvents.php">Spring events</a></li>
+                           <li ><a class="springEvent" href="view/searchForEvent.php">Search for events</a></li>
                        </ul>
                    </li>
                    <li ><a class="contact" href="view/contact.php">Contact</a></li>

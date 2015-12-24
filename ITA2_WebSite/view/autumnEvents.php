@@ -28,21 +28,25 @@
                 <div> 
                     <!----put carousel here!--->
                       <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
+<!--                         Indicators 
                         <ol class="carousel-indicators">
                           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                           <li data-target="#myCarousel" data-slide-to="1"></li>
-                        </ol>
+                        </ol>-->
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
 
                           <div class="item active film">
-                              <a href="#Film"><img src="../templates/images/events/Autumn/autumn5.jpg" alt="Film"></a>
+                            <a href="#Film"><img src="../templates/images/events/Autumn/autumn5.jpg" alt="Film"></a>
                             <div class="classCaption" class="Desc">
                                 <div class="captionTitle">Netherlands Film Festival</div>
                                 <div class="timeLocation">23 Sept| Utrecht</div>
                                 <div class="eventContentD">Watch a large variety of Dutch movies at the Netherlands Film Festival in Utrecht. From very famous to truly obscure and from features and documentaries to short films and TV…</div>
+                                <div class ="addFavorite">
+                                    <span></span>
+                                    <a onclick="addFavortieEvent()">Add to favorite events</a>
+                                </div>
                             </div>
                           </div>
                           <div class="item pgallery">
@@ -68,7 +72,7 @@
                 </div><!--end div#innercontainer-->
             </div><!--End #container-->
             <?php
-            include 'footer.inc.php';
+                include 'footer.inc.php';
             ?>
         </div>
     </body>
