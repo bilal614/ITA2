@@ -44,8 +44,8 @@
                                 <div class="timeLocation">23 Sept| Utrecht</div>
                                 <div class="eventContentD">Watch a large variety of Dutch movies at the Netherlands Film Festival in Utrecht. From very famous to truly obscure and from features and documentaries to short films and TV…</div>
                                 <div class ="addFavorite">
-                                    <span></span>
                                     <a onclick="addFavortieEvent()">Add to favorite events</a>
+                                    <span></span>
                                 </div>
                             </div>
                           </div>
@@ -55,6 +55,10 @@
                                     <div class="captionTitle">Portrait Gallery</div>
                                     <div class="timeLocation">9 Nov - 31 Dec | Amsterdam</div>
                                     <div class="eventContentD">Thirty huge 17th-century group portraits from the collections of the Amsterdam Museum and the Rijksmuseum can be admired in Hermitage Amsterdam until the end of 2016…</div>
+                                    <div class ="addFavorite">
+                                    <a onclick="addFavortieEvent()">Add to favorite events</a>
+                                    <span></span>
+                                </div>
                                 </div>
                           </div>
                         <!-- Left and right controls -->

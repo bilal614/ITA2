@@ -1274,8 +1274,8 @@ ol#culture{
     color: white!important;
     height:20%!important;
     top:30%!important;
-    background-color: white!important;
     background-image: none!important;
+    text-shadow: none!important;
 }
 
 .classCaption{
@@ -1517,32 +1517,109 @@ img.large {
 /*Add events as favorite events*/
 div.addFavorite
 {
-    height: 50px;
-    width: 400px;
+    width: 240px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     display: inline-block;
     background-color: #E36D01;
+    margin-top: 30px;
 }
 div.addFavorite > a
 {
-    font-size: 18px;
+    font-size: 16px;
     font-family: Tahoma;    
     color: #F5F5F5;
-    width: 80%;
+    width: 83%;
     float: left;
+    padding-top: 10px;
+    font-weight: 800;
     
 }
 div.addFavorite > span
 {
-  
-    height: 100%;
-    width: 20%;
+    height: 36px;
+    width: 17%;
     float: right;
     background-image: url("../images/events/add.png");
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: center;
     margin-top: 5px;
+    
+}
+div.addFavorite:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+/*Personal page*/
+div#topBox{
+    height: 150px;
+    background-color: #F5F5F5;
+    margin: 10px 50px;
+}
+div#picBox
+{
+    width: 15%;
+    float: left;
+}
+div#picBox > span{
+    background-image: url("../images/index/userPer.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+div#inforBox{
+    width: 70%;
+    float: left;
+    padding: 30px;
+}
+div#inforBox .name{
+    text-align: left;
+    font-family: Signika;
+    font-size: 35px;
+    border-bottom: 3px solid #E36D01;
+}
+div#inforBox .email{
+    font-family: Signika;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.greyBoxFavorite{
+    background-color: #F5F5F5;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    padding: 10px;
+}
+.borderFavorite{
+    border-left: 2px solid #F5F5F5;
+    border-right: 2px solid #F5F5F5;
+    border-bottom: 2px solid #F5F5F5;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+div#botBox{
+    background-color: #F5F5F5;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px; 
+    padding: 10px 30px;
+    overflow: auto;
+}
+
+#joinedBox{
+    float: left;
+    width: 40%;
+}
+#visitedBox{
+    float: right;
+    width: 40%;
+    text-align: right;  
 }
