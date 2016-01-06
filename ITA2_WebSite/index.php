@@ -58,7 +58,7 @@
                 </nav>
                 <div id="Login">
                     <div>
-                        <a id="btnLogin" href="view/signIn.view.php">Login
+                        <a id="btnLogin" href="controller/signIn.php">Login
                         </a>
                         <a id="btnSignUp" href="view/signUp.view.php">Sign up</a>
                     </div>

@@ -29,7 +29,7 @@
             
 
             public static function authenticate($email,$password){
-                $password = md5($password);
+                //$password = md5($password);
                 $conn=  parent::connect();
                 $sql="SELECT * FROM ".TBL_USER." WHERE email= :userEmail AND password= :password AND Active = 1";
                 try{
