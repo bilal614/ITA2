@@ -22,9 +22,71 @@ function displayHeadTag(){
 }
 
 function displayHeader(){
-    if(!isset($_SESSION['userEmail']) && $_SESSION['userEmail'] == " "){
+    if(isset($_SESSION['userEmail']) && $_SESSION['userEmail'] != ''){
         ?>
-            <header>
+    <header>
+            <div id="leftLogo">
+                    <a href="../index.php"><img id="logo" 
+                                                  src="../templates/images/index/logo.png" alt="ISNL">
+                    </a>
+                </div>
+                <nav id = "mainMenu">
+                <ul>
+                  <li>
+                      <a class="exploreNL" href="../view/explorenl.php">Explore NL</a>
+                       <ul>
+                           <li ><a class="culture" href="../view/culture.php">Culture</a></li>
+                           <li ><a class="transport" href="../view/publictransport.php">Public transport</a></li>
+                           <li ><a class="weather" href="../view/weather.php">Weather</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a class="thingstodo" href="../view/thingstodo.php">Things to do</a>
+                       <ul>
+                           <li ><a class="food" href="../view/food.php">Food</a></li>
+                           <li ><a class="shopping" href="../view/shopping.php">Shopping</a></li>
+                           <li ><a class="cycling" href="../view/cycling.php">Cycling</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a class="event" href="../view/events.php">Events</a>
+                       <ul>
+                           <li ><a class="summerEvent" href="../view/summerEvents.php">Summer events</a></li>
+                           <li ><a class="autumnEvent" href="../view/autumnEvents.php">Autumn events</a></li>
+                           <li ><a class="winterEvent" href="../view/winterEvents.php">Winter events</a></li>
+                           <li ><a class="springEvent" href="../view/springEvents.php">Spring events</a></li>
+                           <li ><a class="springEvent" href="../view/searchForEvent.php">Search for events</a></li>
+                       </ul>
+                   </li>
+                   <li ><a class="contact" href="../view/contact.php">Contact</a></li>
+                </ul>
+            </nav>  
+            <div id="LoginSuccess">
+                <div>
+                    <div class="user-image-wrapper">
+                        <img class="user-image" src="../templates/images/index/user.png">
+                    </div>
+                    <div class="dropdown" id="name-wrapper">
+                        <div class="dropdown-toggle user-name-style"  data-toggle="dropdown">
+                            <?php
+                            echo $_SESSION['username'];
+                            ?>
+                        <span class="caret"></span></div>
+                        <ul class="dropdown-menu">
+                            <li><a href="../controller/personalPage.php">Favorite events</a></li>
+                          <li><a href="../controller/personalPage.php">Your profile</a></li>
+                          <li><a id="btnLogOut" href="../controller/logOut.php">Log out</a></li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+              
+        <?php
+    }
+    else {
+        ?>    
+        <header>
                 <div id="leftLogo">
                     <a href="../index.php"><img id="logo" 
                                                   src="../templates/images/index/logo.png" alt="ISNL">
@@ -62,73 +124,12 @@ function displayHeader(){
                 </nav>
                 <div id="Login">
                     <div>
-                        <a id="btnLogin" href="../controller/signIn.view.php">Login
+                        <a id="btnLogin" href="../controller/signIn.php">Login
                         </a>
                         <a id="btnSignUp" href="../view/signUp.view.php">Sign up</a>
                     </div>
                 </div>
-            </header>  
-        <?php
-    }
-    else {
-        ?>    
-       <header>
-            <div id="leftLogo">
-                    <a href="../index.php"><img id="logo" 
-                                                  src="../templates/images/index/logo.png" alt="ISNL">
-                    </a>
-                </div>
-                <nav id = "mainMenu">
-                <ul>
-                  <li>
-                      <a class="exploreNL" href="../view/explorenl.php">Explore NL</a>
-                       <ul>
-                           <li ><a class="culture" href="../view/culture.php">Culture</a></li>
-                           <li ><a class="transport" href="../view/publictransport.php">Public transport</a></li>
-                           <li ><a class="weather" href="../view/weather.php">Weather</a></li>
-                       </ul>
-                   </li>
-                   <li>
-                       <a class="thingstodo" href="../view/thingstodo.php">Things to do</a>
-                       <ul>
-                           <li ><a class="food" href="../view/food.php">Food</a></li>
-                           <li ><a class="shopping" href="../view/shopping.php">Shopping</a></li>
-                           <li ><a class="cycling" href="../view/cycling.php">Cycling</a></li>
-                       </ul>
-                   </li>
-                   <li>
-                       <a class="event" href="../view/events.php">Events</a>
-                       <ul>
-                           <li ><a class="summerEvent" href="../view/summerEvents.php">Summer events</a></li>
-                           <li ><a class="autumnEvent" href="../view/autumnEvents.php">Autumn events</a></li>
-                           <li ><a class="winterEvent" href="../view/winterEvents.php">Winter events</a></li>
-                           <li ><a class="springEvent" href="../view/springEvents.php">Spring events</a></li>
-                           <li ><a class="springEvent" href="../view/springEvents.php">Search for events</a></li>
-                       </ul>
-                   </li>
-                   <li ><a class="contact" href="../view/contact.php">Contact</a></li>
-                </ul>
-            </nav>  
-            <div id="LoginSuccess">
-                <div>
-                    <div class="user-image-wrapper">
-                        <img class="user-image" src="../templates/images/index/user.png">
-                    </div>
-                    <div class="dropdown" id="name-wrapper">
-                        <div class="dropdown-toggle user-name-style"  data-toggle="dropdown">
-                            <?php
-                            echo $_SESSION['username'];
-                            ?>
-                        <span class="caret"></span></div>
-                        <ul class="dropdown-menu">
-                            <li><a href="../controller/personalPage.php">Favorite events</a></li>
-                          <li><a href="../controller/personalPage.php">Your profile</a></li>
-                          <li><a id="btnLogOut" href="../controller/logOut.php">Log out</a></li> 
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header> 
+            </header>
         <?php
     }
 }

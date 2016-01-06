@@ -1,10 +1,14 @@
+<?php 
+    session_start();
+    include '../includes/common.inc.php';
+?>
 <!DOCTYPE html>
 <html>
-    <?php include 'headTag.inc.php'?>
+    <?php displayHeadTag(); ?>
     <body>  
         <div id="mainContainer">
             <?php
-                include 'header.inc.php';
+                displayHeader();
             ?>
             <div id="container">
                 <div class="innercontainer">
@@ -53,7 +57,7 @@
                 </div><!--end div.innercontaine!-->
             </div><!--End #container-->
             <?php
-            include 'footer.inc.php';
+            displayFooter();
             ?>
         </div>
     </body>

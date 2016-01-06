@@ -1,4 +1,7 @@
-
+<?php 
+    session_start();
+    include '../includes/common.inc.php';
+?>
 <link rel="stylesheet" 
 href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <script src = "jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
@@ -16,11 +19,11 @@ href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!DOCTYPE html>
 <html>
-    <?php include 'headTag.inc.php'?>
+    <?php displayHeadTag();?>
     <body>  
         <div id="mainContainer">
             <?php
-                include 'header.inc.php';
+                displayHeader();
             ?>
             <div id="container">
                 <div class ="mainNav">
@@ -124,7 +127,7 @@ href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
                 </div><!--end div.innercontainer-->
             </div><!--End #container-->
             <?php
-            include 'footer.inc.php';
+            displayFooter();
             ?>
         </div>
     </body>

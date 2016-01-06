@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-   
-    <?php displayHeadTag();?>
-
+    <?php displayHeadTag(); ?>
     <body>
         <div id="mainContainer">
         <?php displayHeader()?>     

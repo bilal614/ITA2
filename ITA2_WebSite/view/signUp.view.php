@@ -1,11 +1,12 @@
 <?php //require '../Controller/phpFormValidation.php'?>
+<?php include '../includes/common.inc.php';?>
 <!DOCTYPE html>
 <html>
-    <?php include 'headTag.inc.php'?>
+    <?php displayHeadTag();?>
     <body>  
         <div id="mainContainer">
             <?php
-                include 'header.inc.php';
+                displayHeader();
             ?>
             <?php
                 include 'header.php';
@@ -79,7 +80,7 @@
                ?>
             
             <?php
-            include 'footer.inc.php';
+               displayFooter();
             ?>
         </div>
     </body>
