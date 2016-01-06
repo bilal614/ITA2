@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <?php include 'headTag.inc.php'?>
+    <?php displayHeadTag();?>
     <body>  
         <div id="mainContainer">
             <?php
-                include 'header.inc.php';
+               displayHeader();
             ?>
             <div id="container">
                <div class="loginMain">
@@ -26,7 +26,7 @@
             </div><!--end div#Container!-->
             
             <?php
-            include 'footer.inc.php';
+                displayFooter();
             ?>
         </div>
     </body>

@@ -7,6 +7,7 @@
             protected $data=array(
                 "email"=>"",
                 "password"=>"",
+                "username"=>"",
             );
             
             public static function getUserAccount($userEmail){
@@ -31,7 +32,7 @@
             public static function authenticate($email,$password){
                 //$password = md5($password);
                 $conn=  parent::connect();
-                $sql="SELECT * FROM ".TBL_USER." WHERE email= :userEmail AND password= :password AND Active = 1";
+                $sql="SELECT * FROM ".TBL_USER." WHERE email= :userEmail AND password= :password";
                 try{
                     $st=$conn->prepare($sql);
                     $st->bindValue(":userEmail", $email,PDO::PARAM_STR);

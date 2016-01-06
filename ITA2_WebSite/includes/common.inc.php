@@ -1,62 +1,157 @@
 <?php
 function displayHeadTag(){
     ?>
-    <title>JAZZ Festival</title>
-    <link href="../templates/css/site.css" rel="stylesheet">  
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="../js/jquery.countdown.min.js"></script>
-    <script src="../js/script.js"></script>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ISDN website</title> 
+           <meta name="homepage" content="An interactive guide for events in NL for students.">
+           <link href="../templates/css/style.css" type="text/css" rel="stylesheet"/>
+           <script src = "../js/jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
+           <script src="../js/jquery/jquery-2.1.4.js" type="text/javascript"></script>
+           <script type="text/javascript" src="../js/script/loginScript.js">
+           </script> 
+           <link rel="stylesheet" 
+               href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+           <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+           <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+           <script src="../js/jquery/jquery.validate.js"></script>
+    </head>
 <?php
 }
 
 function displayHeader(){
-    ?>
-    <div class="navigation">
-    <ul class="nav">
-        <li>
-            <a href="../index.php">Home</a>
-        </li>
-        <li>
-            <a href="../webPages/News_Page.php">News</a>
-        </li>
-        <li>
-            <a href="../webPages/Program.php">Program</a>
-        </li>
-        <li>
-            <a href="../webPages/Maps.php">Guide</a>
-            <ul>
-                <li><a href="../webPages/Maps.php">Travel</a></li>
-                <li><a href="../webPages/festivalmap.php">Festival Map</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="../controller/login.php">Log in\Register</a>
-            <ul>
-                <li><a href="../controller/login.php">Login</a></li>
-                <li><a href="../controller/register.php">Register</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="../webPages/Contact_US.php">Contacts</a>
-        </li>
-    </ul>
-</div>
-
-<?php
+    if(!isset($_SESSION['userEmail']) && $_SESSION['userEmail'] == " "){
+        ?>
+            <header>
+                <div id="leftLogo">
+                    <a href="../index.php"><img id="logo" 
+                                                  src="../templates/images/index/logo.png" alt="ISNL">
+                    </a>
+                </div>
+                <nav id = "mainMenu">
+                <ul>
+                  <li>
+                      <a class="exploreNL" href="../view/explorenl.php">Explore NL</a>
+                       <ul>
+                           <li ><a class="culture" href="../view/culture.php">Culture</a></li>
+                           <li ><a class="transport" href="../view/publictransport.php">Public transport</a></li>
+                           <li ><a class="weather" href="../view/weather.php">Weather</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a class="thingstodo" href="../view/thingstodo.php">Things to do</a>
+                       <ul>
+                           <li ><a class="food" href="../view/food.php">Food</a></li>
+                           <li ><a class="shopping" href="../view/shopping.php">Shopping</a></li>
+                           <li ><a class="cycling" href="../view/cycling.php">Cycling</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a class="event" href="../view/events.php">Events</a>
+                       <ul>
+                           <li ><a class="summerEvent" href="../view/summerEvents.php">Summer events</a></li>
+                           <li ><a class="autumnEvent" href="../view/autumnEvents.php">Autumn events</a></li>
+                           <li ><a class="winterEvent" href="../view/winterEvents.php">Winter events</a></li>
+                           <li ><a class="springEvent" href="../view/springEvents.php">Spring events</a></li>
+                       </ul>
+                   </li>
+                   <li ><a class="contact" href="../view/contact.php">Contact</a></li>
+                </ul>
+                </nav>
+                <div id="Login">
+                    <div>
+                        <a id="btnLogin" href="../controller/signIn.view.php">Login
+                        </a>
+                        <a id="btnSignUp" href="../view/signUp.view.php">Sign up</a>
+                    </div>
+                </div>
+            </header>  
+        <?php
+    }
+    else {
+        ?>    
+       <header>
+            <div id="leftLogo">
+                    <a href="../index.php"><img id="logo" 
+                                                  src="../templates/images/index/logo.png" alt="ISNL">
+                    </a>
+                </div>
+                <nav id = "mainMenu">
+                <ul>
+                  <li>
+                      <a class="exploreNL" href="../view/explorenl.php">Explore NL</a>
+                       <ul>
+                           <li ><a class="culture" href="../view/culture.php">Culture</a></li>
+                           <li ><a class="transport" href="../view/publictransport.php">Public transport</a></li>
+                           <li ><a class="weather" href="../view/weather.php">Weather</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a class="thingstodo" href="../view/thingstodo.php">Things to do</a>
+                       <ul>
+                           <li ><a class="food" href="../view/food.php">Food</a></li>
+                           <li ><a class="shopping" href="../view/shopping.php">Shopping</a></li>
+                           <li ><a class="cycling" href="../view/cycling.php">Cycling</a></li>
+                       </ul>
+                   </li>
+                   <li>
+                       <a class="event" href="../view/events.php">Events</a>
+                       <ul>
+                           <li ><a class="summerEvent" href="../view/summerEvents.php">Summer events</a></li>
+                           <li ><a class="autumnEvent" href="../view/autumnEvents.php">Autumn events</a></li>
+                           <li ><a class="winterEvent" href="../view/winterEvents.php">Winter events</a></li>
+                           <li ><a class="springEvent" href="../view/springEvents.php">Spring events</a></li>
+                           <li ><a class="springEvent" href="../view/springEvents.php">Search for events</a></li>
+                       </ul>
+                   </li>
+                   <li ><a class="contact" href="../view/contact.php">Contact</a></li>
+                </ul>
+            </nav>  
+            <div id="LoginSuccess">
+                <div>
+                    <div class="user-image-wrapper">
+                        <img class="user-image" src="../templates/images/index/user.png">
+                    </div>
+                    <div class="dropdown" id="name-wrapper">
+                        <div class="dropdown-toggle user-name-style"  data-toggle="dropdown">
+                            <?php
+                            echo $_SESSION['username'];
+                            ?>
+                        <span class="caret"></span></div>
+                        <ul class="dropdown-menu">
+                            <li><a href="../controller/personalPage.php">Favorite events</a></li>
+                          <li><a href="../controller/personalPage.php">Your profile</a></li>
+                          <li><a id="btnLogOut" href="../controller/logOut.php">Log out</a></li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header> 
+        <?php
+    }
 }
 
 function displayFooter(){
     ?>
-    <div class="footer">
-    <div class= "container">
-        <a href="https://www.facebook.com/" ><img src="../templates/images/fb.png" alt="facebook logo"></a>
-        <a href="https://twitter.com/"><img src="../templates/images/twitter.png" alt="twitter logo"></a>
-        <span id="footer">Follow us on:</span>
-        <div class = "clear"></div>
-    </div>
-    </div>
-
+     <footer id = "footer">
+        <div class="fLeftcol">
+            <a href="http://www.holland.com/">Holland.com</a>
+            <a href="http://www.iamsterdam.com/en/">I love Amsterdam</a>
+        </div>
+        <div class="fLeftcol">
+            <a href="http://www.roughguides.com/">Rough Guide</a>
+            <a href="https://www.studyinholland.nl/">Study in Holland</a>
+        </div>
+        <div id="fRightcol">
+            <div>Connect with ISNL</div>
+            <nav>
+            <a id ="facebook"></a>
+            <a id ="twitter"></a>
+            </nav>
+        </div>
+    </footer>
 <?php    
 }
 

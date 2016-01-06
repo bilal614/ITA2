@@ -1,15 +1,17 @@
 <?php
     session_start();
     require_once '../model/User.class.php' ;
+    require_once '../includes/common.inc.php' ;
     if(isset($_SESSION['userEmail'])){
         $email = $_SESSION['userEmail'];
-        $eventAccount = EventAccount::getByEmailAddress($email);
-        $infors = $eventAccount->GetData();
+        $userAccount = User::getUserAccount($email);
+        $infor = $userAccount->GetData();
+        $_SESSION['username'] = $infor['username'];
     }
     else{
         echo "Opps! You need to login for this page!";
     }   
     
-   include '../webPages/profile.view.php';
+   include '../view/profile.view.php';
         
 

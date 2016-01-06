@@ -4,6 +4,7 @@ USE ita2;
 CREATE TABLE itaUsers(
 	email	VARCHAR(64) NOT NULL,
 	password VARCHAR(16) NOT NULL,
+	username VARCHAR(20) NOT NULL,
 	PRIMARY KEY (email)
 ); 
 
@@ -26,5 +27,5 @@ CONSTRAINT FK_events FOREIGN KEY(eventId) REFERENCES Events(eventId)
 );
 
 
-INSERT INTO itaUsers(email,password) VALUES('bilalbutt.614@gmail.com','bilal123');
-INSERT INTO itaUsers(email,password) VALUES('thanhnk123@gmail.com', 'thanh123');
+INSERT INTO itaUsers(email,password) VALUES('bilalbutt.614@gmail.com','bilal123','Bilal');
+INSERT INTO itaUsers(email,password) VALUES('thanhnk123@gmail.com', 'thanh123','thanhhnk');
