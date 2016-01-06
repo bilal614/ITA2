@@ -1,33 +1,43 @@
 <?php
-require '../model/UsersDAO.php';
-include '../signIn.view.php';
 session_start();
+include '../model/User.class.php' ;
+include '../includes/common.inc.php';
 
-
-if(isset($_POST["login"])){
-    login();
-} elseif( isset($_GET["action"]) and $_GET["action"]=="logout"){
-    logout();
-}elseif(isset($_SESSION["username"])){
-    displaypage();
-}else{
-    echo '<p>Could not login.';
+$errors = array();
+if(empty($_POST) === false){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    
+    if(empty($email) === true || empty($password)=== true){
+       $errors[] = "Please enter your email or your password";
+    }
+    else if (User::user_exists($email)===FALSE){
+        $errors[] = "This email is not valid";
+    }
+//    else if (User::user_active($email)=== FALSE){
+//        $errors[] = "Please activate your account. May be it has not activated yet!";
+//    } 
+    else {
+        $result = User::authenticate($email, $password);
+        if($result === false){
+            $errors[] = "Your email or password is not correct";
+        }
+        else{
+            $_SESSION['userEmail'] = $result;
+            //Redirect to personal page
+            header('Location: personalPage.php');  
+            exit();
+        }
+    }
 }
 
- function login($email,$password){
-     if(isset($_POST["email"]) and isset($_POST["password"])){
-         if($_POST["email"]==$email and $_POST["password"]==$password){
-             $_SESSION["username"]=$email;
-             session_write_close();
-             header("Location: signIn.view.php");
-         }else{echo "<p>Email and password do not exist in the system.";}
-     }
- }
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+function HandleErrors(){
+    global $errors;
+    if(empty($errors) === false) {
+            //oput errors
+                echo output_error($errors); 
+           }
+}
 
-?>
+include '../view/signIn.view.php';

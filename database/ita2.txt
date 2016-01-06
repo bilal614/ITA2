@@ -3,11 +3,11 @@ USE ita2;
 /*Create tables and contraints*/
 CREATE TABLE itaUsers(
 	email	VARCHAR(64) NOT NULL,
-	password VARCHAR(16) NOT NULL 
+	password VARCHAR(16) NOT NULL,
 	PRIMARY KEY (email)
 ); 
 
-CREATE TABLE Event(
+CREATE TABLE Events(
 	eventId INTEGER NOT NULL,
 	name	VARCHAR(256) NOT NULL,
 	date	DATE NOT NULL,
@@ -19,10 +19,10 @@ CREATE TABLE Event(
 
 CREATE TABLE Favorite(
 	email VARCHAR(64) NOT NULL,
-	eventId INTEGER NOT NULL
+	eventId INTEGER NOT NULL,
 	PRIMARY KEY(email,eventId),
 CONSTRAINT FK_users FOREIGN KEY(email) REFERENCES itaUsers(email),
-CONSTRAINT FK_events FOREIGN KEY(eventId) REFERENCES Event(eventId)
+CONSTRAINT FK_events FOREIGN KEY(eventId) REFERENCES Events(eventId)
 );
 
 

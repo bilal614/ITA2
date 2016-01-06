@@ -1,29 +1,3 @@
-<?php
-    session_start();
-    require '../model/DBConnection.php';
-    //constants for example values, will be removed after set up a real databases
-    
-    define('EMAIL','thanhhnk@gmail.com');
-    define('PASSWORD','1234');
-    define('USERNAME','thanhhnk');;
-    if ( $_SERVER['REQUEST_METHOD'] == 'POST'){
-        //Get their values
-       $email = $_POST['email'];
-       $password = $_POST['password'];
-      
-       //Validate that against the recodes
-       if ($email === EMAIL && $password === PASSWORD){
-           //credentials are correct
-           
-           
-           //login +  set session
-           $_SESSION['email'] = $email;// stored user name into the section, this value can be passed page to page
-           $_SESSION['username'] = USERNAME;
-           //redirecting to Profile.php
-           header("Location: Profile.php");
-       }
-    }
-?>
 <!DOCTYPE html>
 <html>
     <?php include 'headTag.inc.php'?>
