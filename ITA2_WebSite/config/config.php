@@ -1,30 +1,11 @@
 <?php
 
-$config = array(
-    "db" => array(
-        "db1" => array(
-            "dbname" => "database1",
-            "username" => "dbUser",
-            "password" => "pa$$",
-            "host" => "localhost"
-        ),
-        "db2" => array(
-            "dbname" => "database2",
-            "username" => "dbUser",
-            "password" => "pa$$",
-            "host" => "localhost"
-        )
-    ),
-    "paths" => array(
-        "images" => array(
-            "FromIndex" => "templates/images/index",
-            "FromView" => "../../templates/images/index",   
-        ),
-        "home" => array(
-            "FromIndex" => "index.php",
-            "FromView" => "../../index.php",
-        )
-    )
-);
+define("DB_DSN","mysql:host=localhost;dbname=prop");
+define("DB_USERNAME","root");
+define("DB_PASSWORD","");
+define("PAGE_SIZE",6);
+define("TBL_USER","itaUsers");
+define("TBL_EVENT","Event");
+define("TBL_FAV","Favorite");
 
 ?>

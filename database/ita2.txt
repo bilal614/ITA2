@@ -2,10 +2,29 @@ CREATE DATABASE ita2;
 USE ita2;
 /*Create tables and contraints*/
 CREATE TABLE itaUsers(
-	email	varchar(64) NOT NULL,
-	password varchar(16) NOT NULL 
+	email	VARCHAR(64) NOT NULL,
+	password VARCHAR(16) NOT NULL 
+	PRIMARY KEY (email)
 ); 
-ALTER TABLE itaUsers ADD CONSTRAINT itaUsersPK PRIMARY KEY(email);
+
+CREATE TABLE Event(
+	eventId INTEGER NOT NULL,
+	name	VARCHAR(256) NOT NULL,
+	date	DATE NOT NULL,
+	location VARCHAR(256),
+	description VARCHAR(1028),
+	pictureLink VARCHAR(1028),
+	PRIMARY KEY(eventId) 	
+);
+
+CREATE TABLE Favorite(
+	email VARCHAR(64) NOT NULL,
+	eventId INTEGER NOT NULL
+	PRIMARY KEY(email,eventId),
+CONSTRAINT FK_users FOREIGN KEY(email) REFERENCES itaUsers(email),
+CONSTRAINT FK_events FOREIGN KEY(eventId) REFERENCES Event(eventId)
+);
+
 
 INSERT INTO itaUsers(email,password) VALUES('bilalbutt.614@gmail.com','bilal123');
 INSERT INTO itaUsers(email,password) VALUES('thanhnk123@gmail.com', 'thanh123');
