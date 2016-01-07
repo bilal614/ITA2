@@ -5,6 +5,7 @@
         <div id="mainContainer">
             <?php
                 displayHeader();
+                Register();
             ?>
             <div id="container">
                 <div class="login-form">

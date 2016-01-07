@@ -59,14 +59,13 @@
             //of a User object, then you call the register function to create an instance of the user in the
             //database
             public function register(){
-                $pword=  md5($this->data["password"]);
                 $conn=  parent::connect();
                 $sql="INSERT INTO ".TBL_USER. " (email,password,signupDate)
                 VALUES(:userName,:password,:signupDate)";
                 try{
                     $st=$conn->prepare($sql);
                     $st->bindValue(":userName",$this->data["email"],PDO::PARAM_STR);
-                    $st->bindValue(":password",$pword,PDO::PARAM_STR);
+                    $st->bindValue(":password",$this->data["password"],PDO::PARAM_STR);
                     $st->bindValue(":signupDate", $this->data["signupDate"],PDO::PARAM_STR);
                     $st->execute();
                     parent::disconnect($conn);

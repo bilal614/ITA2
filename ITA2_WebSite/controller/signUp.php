@@ -36,13 +36,13 @@ $errors = array();
         {
             $errors[]="This email is already registered.";
         }
-        else{
+/*        else{
             if(isset($_POST['submitButton'])){
                 //Redirect to signIn page
                 header('Location: signIn.php');  
                 exit();
             }
-        }
+        }*/
     }
 
 
@@ -56,17 +56,21 @@ function HandleErrors(){
 
 
 function Register(){
+    global $errors;
+    if(!empty($_POST) && isset($_POST['submitButton']) && empty($errors)){    
         $date =  date('m.d.Y');
         $userData=array(
             'email' => $_POST['email'],
             'password'=> $_POST['password'],
             'signupDate' => $date
         );
-        $newUser=new User($data);
+        $newUser=new User($userData);
         
-        if(isset($_POST['submitButton'])){
-            $result = User::register(); 
-        }
+        $newUser->register();
+        $_SESSION['email']=$_POST['email'];
+        header('Location: signIn.php');  
+        exit();
+    }
 }
 
 include '../view/signUp.view.php';
