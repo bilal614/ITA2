@@ -7,7 +7,7 @@
             protected $data=array(
                 "email"=>"",
                 "password"=>"",
-                "username"=>"",
+                "signupDate"=>"",
             );
             
             public static function getUserAccount($userEmail){
@@ -61,12 +61,13 @@
             public function register(){
                 $pword=  md5($this->data["password"]);
                 $conn=  parent::connect();
-                $sql="INSERT INTO ".TBL_USER. " (email,password)
-                VALUES(:userName,:password)";
+                $sql="INSERT INTO ".TBL_USER. " (email,password,signupDate)
+                VALUES(:userName,:password,:signupDate)";
                 try{
                     $st=$conn->prepare($sql);
                     $st->bindValue(":userName",$this->data["email"],PDO::PARAM_STR);
                     $st->bindValue(":password",$pword,PDO::PARAM_STR);
+                    $st->bindValue(":signupDate", $this->data["signupDate"],PDO::PARAM_STR);
                     $st->execute();
                     parent::disconnect($conn);
                 }catch(PDOException $e){
@@ -75,7 +76,7 @@
                 }
             }
             
-            //this method will return true if the given user's email is exist in the database
+            //this method will return true if the given user's email exists in the database
             //used for registration 
             public static function user_exists($userEmail){
                 $conn=parent::connect();

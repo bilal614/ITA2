@@ -60,7 +60,7 @@
                     <div>
                         <a id="btnLogin" href="controller/signIn.php">Login
                         </a>
-                        <a id="btnSignUp" href="view/signUp.view.php">Sign up</a>
+                        <a id="btnSignUp" href="controller/signUp.php">Sign up</a>
                     </div>
                 </div>
             </header>  

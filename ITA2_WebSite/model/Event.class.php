@@ -70,21 +70,21 @@ class Event extends DataObject {
             public static function getFavorites($email){//this function returns an array of eventId's that are listed in 
                 //Favorite table belonging to a certain email which is provided as argument parameter
                 $conn=parent::connect();
-            $sql ="SELECT eventId FROM ".TBL_FAV. " WHERE email= :Email";
+                $sql ="SELECT eventId FROM ".TBL_FAV. " WHERE email= :Email";
     
-            try{
-                $st=$conn->prepare($sql);
-                $st->bindValue(":Email", $email,PDO::PARAM_STR);
-                $st->execute();
-                $row=$st->fetch();
-                parent::disconnect($conn);
+                try{
+                    $st=$conn->prepare($sql);
+                    $st->bindValue(":Email", $email,PDO::PARAM_STR);
+                    $st->execute();
+                    $row=$st->fetch();
+                    parent::disconnect($conn);
                 
-                if(!empty($row)) 
-                {return new Event($row);}
-                }  catch (PDOException $e){
+                    if(!empty($row)) 
+                    {return new Event($row);}
+                    }  catch (PDOException $e){
                     parent::disconnect($conn);
                     die("Query failed: ".$e->getMessage());
-                }
+                    }
                 return null;
             }
 }
