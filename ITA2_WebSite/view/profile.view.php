@@ -11,10 +11,10 @@
                         <span></span>
                     </div>
                     <div id = "inforBox">
-                        <div class="name">Thanh Hnk</div>
+                        <div class="name"><?php echo($_SESSION['username']); ?></div>
                         <div class="email">
                             <span>Email:</span>
-                            <span>thanhhnk@gmail.com</span>
+                            <span><?php echo($_SESSION['userEmail']); ?></span>
                         </div>
                     </div>
                 </div>

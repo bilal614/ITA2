@@ -7,6 +7,9 @@
         $userAccount = User::getUserAccount($email);
         $infor = $userAccount->GetData();
         $_SESSION['username'] = $infor['username'];
+        
+        //Lasted time for visitor
+        
     }
     else{
         echo "Opps! You need to login for this page!";
