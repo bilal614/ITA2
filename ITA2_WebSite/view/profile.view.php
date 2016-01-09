@@ -11,10 +11,10 @@
                         <span></span>
                     </div>
                     <div id = "inforBox">
-                        <div class="name"><?php echo($_SESSION['username']); ?></div>
+                        <div class="name"><?php echo$_SESSION['username']; ?></div>
                         <div class="email">
                             <span>Email:</span>
-                            <span><?php echo($_SESSION['userEmail']); ?></span>
+                            <span><?php echo$_SESSION['userEmail']; ?></span>
                         </div>
                     </div>
                 </div>
@@ -87,11 +87,11 @@
                 <div id="botBox" class="eventTitle">
                     <div id="joinedBox">
                         <span>Joined: </span>
-                        <span>Oct 21, 2015</span>
+                        <span><?php echo date_format(date_create($infor['signupDate']),'jS F Y');?></span>
                     </div>
                     <div id="visitedBox">
                         <span>Last visited: </span>
-                        <span>Nov 21, 2015</span>
+                        <span><?php echo date("jS F Y",$last);?></span>
                     </div>
                 </div>
             </div>   <!--end div#innerContainer!--> 

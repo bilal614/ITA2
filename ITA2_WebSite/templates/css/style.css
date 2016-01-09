@@ -1623,3 +1623,17 @@ div#botBox{
     width: 40%;
     text-align: right;  
 }
+.errorlist
+{
+    background-color: #f2dede;
+    list-style-type: none;
+    padding: 10px 5px;
+    font-size: 16px;
+    color: #a94442;
+    margin: 10px 50px;  
+    width: 78%;
+}
+.errorlist > li{
+    padding-left: 35px;
+    text-align: left;
+}

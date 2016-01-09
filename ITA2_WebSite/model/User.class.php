@@ -8,6 +8,7 @@
                 "email"=>"",
                 "password"=>"",
                 "signupDate"=>"",
+                "username"=>"",
             );
             
             public static function getUserAccount($userEmail){

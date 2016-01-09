@@ -10,6 +10,7 @@
                <div class="loginMain">
                     <div class="login-form">
                         <h1>Login</h1>
+                        <?php HandleErrors(); ?>
                         <div class="head">
                             <img alt="" src="../templates/images/index/user.png">
                         </div>

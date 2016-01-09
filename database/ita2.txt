@@ -5,6 +5,7 @@ CREATE TABLE itaUsers(
 	email	VARCHAR(64) NOT NULL,
 	password VARCHAR(16) NOT NULL,
 	signupDate DATE NOT NULL,
+	username VARCHAR(20) NOT NULL,
 	PRIMARY KEY (email)
 ); 
 
@@ -27,5 +28,5 @@ CONSTRAINT FK_events FOREIGN KEY(eventId) REFERENCES Events(eventId)
 );
 
 
-INSERT INTO itaUsers(email,password) VALUES('bilalbutt.614@gmail.com','bilal123','Bilal');
-INSERT INTO itaUsers(email,password) VALUES('thanhnk123@gmail.com', 'thanh123','thanhhnk');
+INSERT INTO itaUsers(email,password,username,signupDate) VALUES('bilalbutt.614@gmail.com','bilal123','Bilal', STR_TO_DATE('02-01-2015', '%d-%m-%Y'));
+INSERT INTO itaUsers(email,password,username,signupDate) VALUES('thanhnk123@gmail.com', 'thanh123','thanhhnk', STR_TO_DATE('15-01-2015', '%d-%m-%Y'));
