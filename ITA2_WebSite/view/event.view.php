@@ -9,7 +9,14 @@
     <script>
          $(document).ready(function() {
             $(".autumnEvent").click(function() {
-                $("#container").load("../view/autumnEvents.view.php");
+                   $.ajax({
+                        url: '../controller/autumnEvent.php',
+                        type: 'post',
+                        data:{ action :'loadAutumn' },
+                        success:function() {
+                          $("#container").load("../view/autumnEvents.view.php");
+                        }
+                   });
             });
         });
     </script>        
