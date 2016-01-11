@@ -68,4 +68,20 @@
 //
 //    } // otherwise, history is not supported, so nothing fancy here.
 //});
-//
+//Show the events page use ajax
+// $(document).ready(function() {
+//            $(".autumnEvent").click(function() {
+//                   $.ajax({
+//                        url: 'autumnEvent.php',
+//                        type: 'post',
+//                        data:{ action :'loadAutumn' },
+//                        success:function(result) {
+//                          $("#container").html(result);
+//                        },
+//                         error: function(xhr, desc, err) {
+//                         console.log(xhr);
+//                         console.log("Details: " + desc + "\nError:" + err);
+//                     }
+//                   });
+//            });
+//        });

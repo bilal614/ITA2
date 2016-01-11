@@ -9,7 +9,7 @@ function displayHeadTag(){
            <link href="../templates/css/style.css" type="text/css" rel="stylesheet"/>
            <script src = "../js/jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
            <script src="../js/jquery/jquery-2.1.4.js" type="text/javascript"></script>
-           <script type="text/javascript" src="../js/script/loginScript.js">
+           <script type="text/javascript" src="../js/script/Script.js">
            </script> 
            <link rel="stylesheet" 
                href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -52,7 +52,7 @@ function displayHeader(){
                        <a class="event" href="../view/events.php">Events</a>
                        <ul>
                            <li ><a class="summerEvent" href="../view/summerEvents.php">Summer events</a></li>
-                           <li ><a class="autumnEvent" href="../controller/event.php">Autumn events</a></li>
+                           <li ><a class="autumnEvent" href="../controller/event.php?season=autumn ">Autumn events</a></li>
                            <li ><a class="winterEvent" href="../view/winterEvents.php">Winter events</a></li>
                            <li ><a class="springEvent" href="../view/springEvents.php">Spring events</a></li>
                            <li ><a class="springEvent" href="../view/searchForEvent.php">Search for events</a></li>
@@ -114,7 +114,7 @@ function displayHeader(){
                        <a class="event" href="../view/events.php">Events</a>
                        <ul>
                            <li ><a class="summerEvent" href="../controller/event.php">Summer events</a></li>
-                           <li ><a class="autumnEvent" href="../controller/event.php">Autumn events</a></li>
+                           <li ><a class="autumnEvent" href="#">Autumn events</a></li>
                            <li ><a class="winterEvent" href="../view/winterEvents.php">Winter events</a></li>
                            <li ><a class="springEvent" href="../view/springEvents.php">Spring events</a></li>
                        </ul>
