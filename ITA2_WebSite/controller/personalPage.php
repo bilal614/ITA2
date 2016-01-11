@@ -10,8 +10,8 @@
         $userAccount = User::getUserAccount($email);
         $infor = $userAccount->GetData();
         $_SESSION['username'] = $infor['username'];
-        
-        $favoriteEventsIds = Event::getFavorites($email);//array containing eventId's of all the events that are 
+        $userAccount->getFavorites();
+        $favoriteEventsIds = $userAccount->getAllFavoriteEvents();//array containing eventId's of all the events that are 
         //favorite events for the user
         
         $favoriteEvents=array();

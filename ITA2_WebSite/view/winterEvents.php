@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="innercontainer">
-                <div class="eventPTitle">Summer event</div>
+                <div class="eventPTitle">Winter event</div>
                 <div class="greyline"></div>
                 <div> 
                     <!----put carousel here!--->

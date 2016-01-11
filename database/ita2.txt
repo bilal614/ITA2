@@ -12,7 +12,7 @@ CREATE TABLE itaUsers(
 CREATE TABLE Events(
 	eventId INTEGER NOT NULL,
 	name	VARCHAR(256) NOT NULL,
-	date	VARCHAR NOT NULL,
+	date	VARCHAR(256) NOT NULL,
 	location VARCHAR(256),
 	description VARCHAR(1028),
 	pictureLink VARCHAR(1028),
@@ -43,10 +43,16 @@ INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES
 'Have Easter breakfast or a lovely brunch, attend a beautiful performance of the Matthäus Passion or spend some time strolling past the many stands at one of the Easter markets. Visit Holland during Easter and discover the many things to do.',
 '../templates/images/events/Spring/SpringEaster.jpg');
 
-INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (5,'Netherlands Film Festival','23 September','Utrecht',
-'Watch a large variety of Dutch movies at the Netherlands Film Festival in Utrecht. From very famous to truly obscure and from features and documentaries to short films and TV…',
-'../templates/images/events/Spring/spring3.jpg');
+INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (5,'Amsterdam Light Festival','27 Nov- 1 Feb','Amsterdam',
+'Discover the loveliest light art at Amsterdam Light Festival.',
+'../templates/images/events/Winter/winter3.jpg');
 
+INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (6,'Scheveningen','1 January','Scheveningen',
+'The new year’s dive is cold, bold and the best way to start the year fresh.',
+'../templates/images/events/Winter/winter1.jpg');
 
 INSERT INTO itaUsers(email,password,username,signupDate) VALUES('bilalbutt.614@gmail.com','bilal123','Bilal', STR_TO_DATE('02-01-2015', '%d-%m-%Y'));
 INSERT INTO itaUsers(email,password,username,signupDate) VALUES('thanhnk123@gmail.com', 'thanh123','thanhhnk', STR_TO_DATE('15-01-2015', '%d-%m-%Y'));
+
+INSERT INTO Favorite(email,eventId) VALUES('bilalbutt.614@gmail.com',3); 
+INSERT INTO Favorite(email,eventId) VALUES('bilalbutt.614@gmail.com',1);
