@@ -51,11 +51,10 @@ function displayHeader(){
                    <li>
                        <a class="event" href="../view/events.php">Events</a>
                        <ul>
-                           <li ><a class="summerEvent" href="../view/summerEvents.php">Summer events</a></li>
-                           <li ><a class="autumnEvent" href="../controller/event.php?season=autumn ">Autumn events</a></li>
-                           <li ><a class="winterEvent" href="../view/winterEvents.php">Winter events</a></li>
-                           <li ><a class="springEvent" href="../view/springEvents.php">Spring events</a></li>
-                           <li ><a class="springEvent" href="../view/searchForEvent.php">Search for events</a></li>
+                           <li ><a class="summerEvent" href="../controller/event.php" onclick = "return loadingRequest('loadSummer');">Summer events</a></li>
+                           <li ><a class="autumnEvent" href="../controller/event.php" onclick = "return loadingRequest('loadAutumn');">Autumn events</a></li>
+                           <li ><a class="winterEvent" href="../controller/event.php" onclick = "return loadingRequest('loadWinter');">Winter events</a></li>
+                           <li ><a class="springEvent" href="../controller/event.php" onclick = "return loadingRequest('loadSpring');">Spring events</a></li>
                        </ul>
                    </li>
                    <li ><a class="contact" href="../view/contact.php">Contact</a></li>
@@ -113,10 +112,10 @@ function displayHeader(){
                    <li>
                        <a class="event" href="../view/events.php">Events</a>
                        <ul>
-                           <li ><a class="summerEvent" href="../controller/event.php">Summer events</a></li>
-                           <li ><a class="autumnEvent" href="#">Autumn events</a></li>
-                           <li ><a class="winterEvent" href="../view/winterEvents.php">Winter events</a></li>
-                           <li ><a class="springEvent" href="../view/springEvents.php">Spring events</a></li>
+                           <li ><a class="summerEvent" href="../controller/event.php" onclick = "return loadingRequest('loadSummer');">Summer events</a></li>
+                           <li ><a class="autumnEvent" href="../controller/event.php" onclick = "return loadingRequest('loadAutumn');">Autumn events</a></li>
+                           <li ><a class="winterEvent" href="../controller/event.php" onclick = "return loadingRequest('loadWinter');">Winter events</a></li>
+                           <li ><a class="springEvent" href="../controller/event.php" onclick = "return loadingRequest('loadSpring');">Spring events</a></li>
                        </ul>
                    </li>
                    <li ><a class="contact" href="../view/contact.php">Contact</a></li>

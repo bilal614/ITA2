@@ -12,9 +12,9 @@
                 displayHeader();
             ?>
             <div id="container">
-            <?php
-                displayEvent();
-            ?>
+                <?php
+                    displayEvent();
+                ?>
             </div><!--End #container-->
             <?php
             displayFooter();

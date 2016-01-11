@@ -85,3 +85,74 @@
 //                   });
 //            });
 //        });
+function loadingAutumnRequest(){
+     $.ajax({
+        url: 'eventAjax.php',
+        type: 'post',
+        data:{ action :'loadAutumn' },
+        success:function() {
+          return true;
+        },
+         error: function(xhr, desc, err) {
+         console.log(xhr);
+         console.log("Details: " + desc + "\nError:" + err);
+     }
+    });   
+}
+function loadingSummerRequest(){
+    $.ajax({
+        url: 'eventAjax.php',
+        type: 'post',
+        data:{ action :'loadSummer' },
+        success:function() {
+          return true;
+        },
+         error: function(xhr, desc, err) {
+         console.log(xhr);
+         console.log("Details: " + desc + "\nError:" + err);
+     }
+    });  
+}
+function loadingWinterRequest(){
+    $.ajax({
+        url: 'eventAjax.php',
+        type: 'post',
+        data:{ action :'loadWinter' },
+        success:function() {
+          return true;
+        },
+         error: function(xhr, desc, err) {
+         console.log(xhr);
+         console.log("Details: " + desc + "\nError:" + err);
+     }
+    });  
+}
+function loadingSpringRequest(){
+    $.ajax({
+        url: 'eventAjax.php',
+        type: 'post',
+        data:{ action :'spring' },
+        success:function() {
+          return true;
+        },
+         error: function(xhr, desc, err) {
+         console.log(xhr);
+         console.log("Details: " + desc + "\nError:" + err);
+     }
+    });  
+}
+function loadingRequest(season){
+    $.ajax({
+        url: 'eventAjax.php',
+        type: 'post',
+        data:{ action :season },
+        success:function() {
+          return true;
+        },
+         error: function(xhr, desc, err) {
+         console.log(xhr);
+         console.log("Details: " + desc + "\nError:" + err);
+     }
+    });  
+}
+
