@@ -76,7 +76,7 @@ class Event extends DataObject {
                     $st=$conn->prepare($sql);
                     $st->bindValue(":Email", $email,PDO::PARAM_STR);
                     $st->execute();
-                    $row=$st->fetch();
+                    $row=$st->fetchAll();
                     parent::disconnect($conn);
                 
                     if(!empty($row)) 

@@ -12,7 +12,7 @@ CREATE TABLE itaUsers(
 CREATE TABLE Events(
 	eventId INTEGER NOT NULL,
 	name	VARCHAR(256) NOT NULL,
-	date	DATE NOT NULL,
+	date	VARCHAR NOT NULL,
 	location VARCHAR(256),
 	description VARCHAR(1028),
 	pictureLink VARCHAR(1028),
@@ -26,6 +26,26 @@ CREATE TABLE Favorite(
 CONSTRAINT FK_users FOREIGN KEY(email) REFERENCES itaUsers(email),
 CONSTRAINT FK_events FOREIGN KEY(eventId) REFERENCES Events(eventId)
 );
+
+INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (1,'Pinkpop','10 Jun- 12 Jun','Landgraaf',
+'Pinkpop is a multi-day event with different stages where (inter)national artists put on spectacular shows.Pinkpop is sold out almost every year.',
+'../templates/images/events/Summer/pinkPop.jpg');
+
+INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (2,'Kings Day in the Netherlands','27 April','Amsterdam',
+'Participate in the national celebration on 27 April and enjoy fun activities in every city!',
+'../templates/images/events/Summer/kingsDay.jpg');
+
+INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (3,'Keukenhof','24 Mar- 16May','Lisse',
+'The best place to see tulips in Holland is Keukenhof. Keukenhof is a park with 7 million flower bulbs surrounded by tulip fields.',
+'../templates/images/events/Spring/spring3.jpg');
+
+INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (4,'Easter in Holland','27-28 Mar','Traditional Dutch event',
+'Have Easter breakfast or a lovely brunch, attend a beautiful performance of the Matthäus Passion or spend some time strolling past the many stands at one of the Easter markets. Visit Holland during Easter and discover the many things to do.',
+'../templates/images/events/Spring/SpringEaster.jpg');
+
+INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (5,'Netherlands Film Festival','23 September','Utrecht',
+'Watch a large variety of Dutch movies at the Netherlands Film Festival in Utrecht. From very famous to truly obscure and from features and documentaries to short films and TV…',
+'../templates/images/events/Spring/spring3.jpg');
 
 
 INSERT INTO itaUsers(email,password,username,signupDate) VALUES('bilalbutt.614@gmail.com','bilal123','Bilal', STR_TO_DATE('02-01-2015', '%d-%m-%Y'));
