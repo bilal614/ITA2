@@ -11,6 +11,13 @@
                 "username"=>"",
             );
             
+            protected $favoriteEvents=array();
+            
+            public function getAllFavoriteEvents()
+            {
+                return $this->favoriteEvents;
+            }
+            
             public static function getUserAccount($userEmail){
             $conn=parent::connect();
             $sql ="SELECT * FROM ".TBL_USER. " WHERE email= :userEmail";
@@ -100,6 +107,44 @@
                     parent::disconnect($conn);
                     die("Query failed: ".$e->getMessage());
                 }
-        
+            }
+            
+            public static function addToFavorites($email,$eventID){
+            
+                $conn=parent::connect();
+                $sql ="INSERT INTO ".TBL_FAV. " (email,eventId) VALUES (:email, :eventId)";
+                try{
+                    $st=$conn->prepare($sql);
+                    $st->bindValue(":email",$email,PDO::PARAM_STR);
+                    $st->bindValue(":eventId", $eventID,PDO::PARAM_INT);
+                    $st->execute();
+                    parent::disconnect($conn);
+                   } 
+                catch (PDOException $e){
+                       parent::disconnect($conn);
+                       die("Query failed: ".$e->getMessage()); }                
+            }
+            
+            public function getFavorites(){//this function returns an array of eventId's that are listed in 
+                //Favorite table belonging to a certain email which is provided as argument parameter
+                $conn=parent::connect();
+                $sql ="SELECT eventId FROM ".TBL_FAV. " WHERE email= :Email";
+                $favEvnts=array();
+                try{
+                    $st=$conn->prepare($sql);
+                    $st->bindValue(":Email", $this->data['email'],PDO::PARAM_STR);
+                    $st->execute();
+                    
+                    $rows=$st->fetchAll(PDO::FETCH_COLUMN,'eventId');
+                    
+                    foreach($rows as $val){
+                        $this->favoriteEvents[]=(integer)$val;
+                    }
+                    
+                    parent::disconnect($conn);
+                    }  catch (PDOException $e){
+                    parent::disconnect($conn);
+                    die("Query failed: ".$e->getMessage());
+                    }
             }
     }
