@@ -109,13 +109,13 @@
                 }
             }
             
-            public static function addToFavorites($email,$eventID){
+            public function addToFavorites($eventID){
             
                 $conn=parent::connect();
                 $sql ="INSERT INTO ".TBL_FAV. " (email,eventId) VALUES (:email, :eventId)";
                 try{
                     $st=$conn->prepare($sql);
-                    $st->bindValue(":email",$email,PDO::PARAM_STR);
+                    $st->bindValue(":email",$this->data['email'],PDO::PARAM_STR);
                     $st->bindValue(":eventId", $eventID,PDO::PARAM_INT);
                     $st->execute();
                     parent::disconnect($conn);
