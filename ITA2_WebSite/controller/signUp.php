@@ -28,22 +28,14 @@ $errors = array();
         if(strlen($_POST['password'])< 8 && strlen($_POST['password'])>25){
             $errors[] = 'Your password must be between 8 and 24 characters long';
         }
-    }
-
-    else if(empty($errors)) {
+        if(empty($errors)) {
         
         if(User::user_exists($email))
         {
             $errors[]="This email is already registered.";
         }
-/*        else{
-            if(isset($_POST['submitButton'])){
-                //Redirect to signIn page
-                header('Location: signIn.php');  
-                exit();
-            }
-        }*/
     }
+ }
 
 
 function HandleErrors(){
@@ -58,10 +50,11 @@ function HandleErrors(){
 function Register(){
     global $errors;
     if(!empty($_POST) && isset($_POST['submitButton']) && empty($errors)){    
-        $date =  date('m.d.Y');
+        $date = date('y-m-d');
         $userData=array(
             'email' => $_POST['email'],
             'password'=> $_POST['password'],
+            'username'=> $_POST['username'],
             'signupDate' => $date
         );
         $newUser=new User($userData);
@@ -70,6 +63,9 @@ function Register(){
         $_SESSION['email']=$_POST['email'];
         header('Location: signIn.php');  
         exit();
+    }
+    else {
+        HandleErrors();
     }
 }
 
