@@ -319,6 +319,7 @@ div.innercontainer{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
+    clear: both;
 }
 
 .leftcolIndex{
@@ -1497,7 +1498,7 @@ img.large {
     color: #888;
     font-family: "Open Sans",sans-serif;
 }
-.login-form input[type="text"],.login-form input[type="password"],.login-form input[type="email"]  {
+.login-form input[type="text"],.login-form input[type="password"],.login-form input[type="email"],.login-form input[type="username"]  {
     text-align: left;
     position: relative;
     width: 97%;
@@ -1636,4 +1637,9 @@ div#botBox{
 .errorlist > li{
     padding-left: 35px;
     text-align: left;
+}
+
+#feedbackContainer{
+    width: 90%;
+    margin: 5px auto;
 }

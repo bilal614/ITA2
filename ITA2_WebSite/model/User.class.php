@@ -68,13 +68,14 @@
             //database
             public function register(){
                 $conn=  parent::connect();
-                $sql="INSERT INTO ".TBL_USER. " (email,password,signupDate)
-                VALUES(:userName,:password,:signupDate)";
+                $sql="INSERT INTO ".TBL_USER. " (email,password,signupDate,username)
+                VALUES(:userName,:password,:signupDate,:username)";
                 try{
                     $st=$conn->prepare($sql);
                     $st->bindValue(":userName",$this->data["email"],PDO::PARAM_STR);
                     $st->bindValue(":password",$this->data["password"],PDO::PARAM_STR);
                     $st->bindValue(":signupDate", $this->data["signupDate"],PDO::PARAM_STR);
+                    $st->bindValue(":username", $this->data["username"], PDO:: PARAM_STR);
                     $st->execute();
                     parent::disconnect($conn);
                 }catch(PDOException $e){

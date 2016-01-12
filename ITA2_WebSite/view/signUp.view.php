@@ -5,16 +5,20 @@
         <div id="mainContainer">
             <?php
                 displayHeader();
-                Register();
+               
             ?>
             <div id="container">
                 <div class="login-form">
                     <h1>Sign Up</h1>
+                    <?php  Register();?>
                     <form id="signupform" action="../controller/signUp.php" method="post" >
                         <!--onsubmit="return validateForm()" //this is for adding jquery validation!-->
                         <fieldset name="SignUpForm">                                                        
-                          <label for="email" >E-Mail: </label>
+                            <label for="email" >E-Mail: </label>
                             <input type="email" name="email" required><br>
+                            
+                            <label for="username" >User name: </label>
+                            <input type="username" name="username" required><br>
                             
                             <label for="password">Password: </label><br>
                             <input type="password" name="password" required><br>
@@ -23,7 +27,7 @@
                             <input type="password" name="confirmpassword" required><br>
                             
                             <input name="submitButton" type="submit" value="Submit">
-                            <input type="reset" value="Reset">                  
+                            <!--<input type="reset" value="Reset">-->                 
                         </fieldset>
                     </form>
                     <!--<script>$("#signupform").validate();</script>!-->
