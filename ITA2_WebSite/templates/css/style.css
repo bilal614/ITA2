@@ -319,6 +319,7 @@ div.innercontainer{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
+    clear: both;
 }
 
 .leftcolIndex{
@@ -1636,4 +1637,9 @@ div#botBox{
 .errorlist > li{
     padding-left: 35px;
     text-align: left;
+}
+
+#feedbackContainer{
+    width: 90%;
+    margin: 5px auto;
 }
