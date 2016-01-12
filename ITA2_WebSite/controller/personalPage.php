@@ -15,7 +15,6 @@
         //favorite events for the user
         
         $favoriteEvents=array();
-        
         foreach($favoriteEventsIds as $eIds)
         {
             $favoriteEvents[]=Event::getEvent($eIds);
@@ -38,18 +37,24 @@
 
     function DisplayFavoriteEvents()
     {
+        global $favoriteEvents;
+        $size = sizeof($favoriteEvents);
+        for($i=0;$i<$size;$i++)
+        {
+            $allEvents = $favoriteEvents[$i]->GetData();
         ?>
-        <div class="event1 sevstyle">
-                <a href="#Film"><img src="../templates/images/events/Autumn/autumn5.jpg" alt="Film"></a>
+        <div class="item active film">
+                <a href="#Film"><img src="<?php echo $allEvents['pictureLink'] ?>" alt="Film"></a>
 
                 <div class="eclassCaption" class="Desc">
                 <div class="orangeLine"></div>
-                <div class="scaptionTitle">Netherlands Film Festival</div>
-                <div class="stimeLocation">23 Sept| Utrecht</div>
-                <div class="seventContentD">Watch a large variety of Dutch movies at the Netherlands Film Festival in Utrecht. From very famous to truly obscure and from features and documentaries to short films and TV…</div>
+                <div class="scaptionTitle"><?php echo $allEvents["name"]; ?></div>
+                <div class="stimeLocation"><?php echo $allEvents['date'] ."|".$allEvents['location']; ?></div>
+                <div class="seventContentD"><?php echo $allEvents['description']; ?></div>
             </div>
         </div>
         <?php
+        }
     }
     
    include '../view/profile.view.php';
