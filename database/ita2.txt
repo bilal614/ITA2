@@ -27,6 +27,17 @@ CONSTRAINT FK_users FOREIGN KEY(email) REFERENCES itaUsers(email),
 CONSTRAINT FK_events FOREIGN KEY(eventId) REFERENCES Events(eventId)
 );
 
+CREATE TABLE CONTACT
+  (
+    MessageID INT NOT NULL ,
+    Email VARCHAR(50) NOT NULL,
+	Name VARCHAR(50) NOT NULL,
+    Message VARCHAR(500) NOT NULL,
+    Subject VARCHAR(100),
+    SentDate DATE NOT NULL
+  ) ;
+ALTER TABLE CONTACT ADD CONSTRAINT CONTACT_PK PRIMARY KEY ( MessageID ) ;
+
 INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (1,'Pinkpop','10 Jun- 12 Jun','Landgraaf',
 'Pinkpop is a multi-day event with different stages where (inter)national artists put on spectacular shows.Pinkpop is sold out almost every year.',
 '../templates/images/events/Summer/pinkPop.jpg');
@@ -52,7 +63,14 @@ INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES
 '../templates/images/events/Winter/winter1.jpg');
 
 INSERT INTO itaUsers(email,password,username,signupDate) VALUES('bilalbutt.614@gmail.com','bilal123','Bilal', STR_TO_DATE('02-01-2015', '%d-%m-%Y'));
-INSERT INTO itaUsers(email,password,username,signupDate) VALUES('thanhnk123@gmail.com', 'thanh123','thanhhnk', STR_TO_DATE('15-01-2015', '%d-%m-%Y'));
+INSERT INTO itaUsers(email,password,username,signupDate) VALUES('thanhhnk@gmail.com', '1234','thanhhnk', STR_TO_DATE('15-01-2015', '%d-%m-%Y'));
 
 INSERT INTO Favorite(email,eventId) VALUES('bilalbutt.614@gmail.com',3); 
 INSERT INTO Favorite(email,eventId) VALUES('bilalbutt.614@gmail.com',1);
+
+INSERT INTO CONTACT(MessageID,Email,Name,Message,Subject,SentDate) VALUES('01','mike@gmail.com','Mike', 'Good webiste for international students','Message from Mike',STR_TO_DATE('15-01-2015', '%d-%m-%Y'));
+INSERT INTO CONTACT(MessageID,Email,Name,Message,Subject,SentDate) VALUES('02','john@gmail.com','John', 'I think this website should be need more information for references','Message from John',STR_TO_DATE('16-01-2015', '%d-%m-%Y'));
+INSERT INTO CONTACT(MessageID,Email,Name,Message,Subject,SentDate) VALUES('03','martin@gmail.com','Martin', 'This website is boring - You guys should add more activites and events','Message from Martin',STR_TO_DATE('17-01-2015', '%d-%m-%Y'));
+INSERT INTO CONTACT(MessageID,Email,Name,Message,Subject,SentDate) VALUES('04','williams@gmail.com','williams', 'I found so much useful information here, thank you guys!','Message from Wiliams',STR_TO_DATE('18-01-2015', '%d-%m-%Y'));
+INSERT INTO CONTACT(MessageID,Email,Name,Message,Subject,SentDate) VALUES('05','Miller@gmail.com','Miller', 'Pretty good website','Message from John',STR_TO_DATE('19-01-2015', '%d-%m-%Y'));
+INSERT INTO CONTACT(MessageID,Email,Name,Message,Subject,SentDate) VALUES('06','North@gmail.com','North', 'This website is boring - You guys should add more activites and events','Message from Martin',STR_TO_DATE('20-01-2015', '%d-%m-%Y'));

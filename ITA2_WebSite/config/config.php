@@ -7,5 +7,6 @@ define("PAGE_SIZE",6);
 define("TBL_USER","itausers");
 define("TBL_EVENT","events");
 define("TBL_FAV","favorite");
+define("TBL_CON","contact")
 
 ?>

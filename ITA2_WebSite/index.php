@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    include 'includes/common.inc.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,7 +12,7 @@
             <link href="templates/css/style.css" type="text/css" rel="stylesheet"/>
             <script src = "js/jquery/jquery-2.1.4.min.js" type="text/javascript"/></script>
             <script src="js/jquery/jquery-2.1.4.js" type="text/javascript"></script>
-            <script type="text/javascript" src="js/script/IndexScript.js">
+            <script type="text/javascript" src="js/script/Script.js">
             </script> 
             <link rel="stylesheet" 
                 href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -69,7 +73,7 @@
             </div>
             
             <?php
-            include 'view/footer.inc.php';
+                displayFooter();
             ?>
         </div><!--end div#mainContainer!-->
         
