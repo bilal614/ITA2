@@ -38,7 +38,7 @@ class Contact extends DataObject {
             public static function getRecentFeedback(){
                 //it will return a null
             $conn=parent::connect();
-            $sql ="SELECT * FROM ".TBL_CON." ORDER BY SentDate LIMIT 5";
+            $sql ="SELECT * FROM ".TBL_CON." ORDER BY SentDate desc LIMIT 5";
     
             try{
                     $st=$conn->prepare($sql);

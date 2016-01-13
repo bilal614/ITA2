@@ -3,7 +3,6 @@
     include '../includes/common.inc.php';
     include '../model/Contact.class.php';
 
-    $_SESSION['loadContact'] = FALSE;
     $errors = array();
     if(!empty($_POST)){
          //Validate the form in server side
@@ -55,14 +54,29 @@
      //display the list of top recent five feedback
     function displayMessages()
     {
-        if($_SESSION['loadContact'])
-        {
-//            $dataFeedback = Contact::getRecentFeedback();
-//            foreach ($dataFeedback as $item)
-//            {
-//                echo $item['name'];
-//            }
-            echo "need to load item here";
+     
+            $dataFeedback = Contact::getRecentFeedback();
+            foreach ($dataFeedback as $item)
+            {
+                ?>
+                    <div class="panel panel-success"> 
+                        <div class="panel-heading"> 
+                            <h3 class="panel-title">
+                                
+                                <?php
+                                echo ("<strong>".$item['Subject']."</strong>"
+                                        ." is sent by <strong> ". $item['Name'].
+                                        "</strong> (".$item['Email'].") "
+                                        . "on ". $item['SentDate']);
+                                ?>
+                            </h3> 
+                        </div> 
+                        <div class="panel-body"> 
+                                <?php echo ($item['Message']);?>
+                        </div> 
+                    </div>
+                <?php
+          
         }
     }
     include '../view/contact.view.php';
