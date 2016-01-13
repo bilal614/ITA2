@@ -1,6 +1,5 @@
 <?php 
     session_start();
-    
     if(!empty($_SESSION['userEmail'])){include 'personalPage.php';}
     require_once '../model/User.class.php';
     
