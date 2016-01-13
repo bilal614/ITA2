@@ -1,11 +1,11 @@
 <?php 
     session_start();
-    include 'personalPage.php';
-    require_once '../model/User.class.php';
-    
-    $favEventIds=array();
-    $email=$_SESSION['userEmail'];
-    $userAcct= User::getUserAccount($email);
+//    include 'personalPage.php';
+//    require_once '../model/User.class.php';
+//    
+//    $favEventIds=array();
+//    $email=$_SESSION['userEmail'];
+//    $userAcct= User::getUserAccount($email);
     
     if($_POST['action'] == 'loadAutumn'){
          $_SESSION['autumn'] = true;
