@@ -3,13 +3,7 @@
     include '../includes/common.inc.php';
     include '../view/event.view.php';
     require_once '../model/User.class.php';
-    $email=$_SESSION['userEmail'];
-    
-    if(!empty($email)){
-        $user = User::getUserAccount($email);
-        $user->getFavorites();
-        $favEvnts = $user->getAllFavoriteEvents();
-    }
+    //$email=$_SESSION['userEmail'];
     
     function displayEvent()
     {
@@ -66,7 +60,7 @@
                                     <?php 
                                     global $favEvnts;
                                     if(!in_array('7', $favEvnts)){ ?>
-                                    <a onclick="return loadingRequest('7');">Add to favorite events</a>
+                                    <a onclick="return addFavEvent('7');">Add to favorite events</a>
                                     <?php } ?>
                                     <span></span>
                                 </div>
@@ -79,7 +73,7 @@
                                     <div class="timeLocation">9 Nov - 31 Dec | Amsterdam</div>
                                     <div class="eventContentD">Thirty huge 17th-century group portraits from the collections of the Amsterdam Museum and the Rijksmuseum can be admired in Hermitage Amsterdam until the end of 2016…</div>
                                     <div class ="addFavorite">
-                                    <a onclick="return loadingRequest('8');">Add to favorite events</a>
+                                    <a onclick="return addFavEvent('8');">Add to favorite events</a>
                                     <span></span>
                                 </div>
                                 </div>
@@ -137,6 +131,10 @@
                                 <div class="eventContentD">Pinkpop is a multi-day event with different stages 
                                 where (inter)national artists put on spectacular shows.Pinkpop is sold out almost 
                                 every year.</div>
+                                <div class ="addFavorite">
+                                <a onclick="return addFavEvent('1');">Add to favorite events</a>
+                                <span></span>
+                                </div>
                             </div>
                           </div>
                           <div class="item kingday">
@@ -147,6 +145,10 @@
                                     <div class="timeLocation">27 APR | Amsterdam</div>
                                     <div class="eventContentD">Participate in the national celebration on 27 April and 
                                             enjoy fun activities in every city! </div>
+                                    <div class ="addFavorite">
+                                    <a onclick="return addFavEvent('2');">Add to favorite events</a>
+                                    <span></span>
+                                    </div>
                                 </div>
                           </div>
                         <!-- Left and right controls -->
@@ -201,6 +203,10 @@
                                 <div class="captionTitle">Keukenhof</div>
                                 <div class="timeLocation">24 Mar-16 May  | Lisse</div>
                                 <div class="eventContentD">The best place to see tulips in Holland is Keukenhof. Keukenhof is a park with 7 million flower bulbs surrounded by tulip fields.</div>
+                                <div class ="addFavorite">
+                                    <a onclick="return addFavEvent('3');">Add to favorite events</a>
+                                    <span></span>
+                                </div>
                             </div>
                           </div>
                           <div class="item Easter">
@@ -210,6 +216,10 @@
                                     <div class="captionTitle">Easter In Holland</div>
                                     <div class="timeLocation">27-28 Mar | Netherlands tranditional events</div>
                                     <div class="eventContentD">Have Easter breakfast or a lovely brunch, attend a beautiful performance of the Matthäus Passion or spend some time strolling past the many stands at one of the Easter markets. Visit Holland during Easter and discover the many things to do.</div>
+                                    <div class ="addFavorite">
+                                    <a onclick="return addFavEvent('4');">Add to favorite events</a>
+                                    <span></span>
+                                    </div>
                                 </div>
                           </div>
                         <!-- Left and right controls -->
@@ -263,6 +273,10 @@
                                 <div class="captionTitle">Amsterdam Light Festival</div>
                                 <div class="timeLocation">27 Nov-1 Feb  | Amsterdam</div>
                                 <div class="eventContentD">Discover the loveliest light art at Amsterdam Light Festival.</div>
+                                <div class ="addFavorite">
+                                    <a onclick="return addFavEvent('5');">Add to favorite events</a>
+                                    <span></span>
+                                </div>
                             </div>
                           </div>
                           <div class="item newYear">
@@ -272,6 +286,10 @@
                                     <div class="captionTitle">Scheveningen New Year's Dive</div>
                                     <div class="timeLocation">1 Jan | Netherlands tranditional festival</div>
                                     <div class="eventContentD">The new year’s dive is cold, bold and the best way to start the year fresh. </div>
+                                    <div class ="addFavorite">
+                                    <a onclick="return addFavEvent('6');">Add to favorite events</a>
+                                    <span></span>
+                                    </div>
                                 </div>
                           </div>
                         <!-- Left and right controls -->
