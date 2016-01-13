@@ -59,46 +59,6 @@
                         <div class="CBdesc">Recent feedback</div>
                         <div id="feedbackData">
                         <?php displayMessages();?>
-                        <div class="panel panel-success"> 
-                            <div class="panel-heading"> 
-                                <h3 class="panel-title">
-                                    Panel title
-                                </h3> 
-                            </div> 
-                            <div class="panel-body"> 
-                                Panel content 
-                            </div> 
-                        </div>
-                         <div class="panel panel-success"> 
-                            <div class="panel-heading"> 
-                                <h3 class="panel-title">
-                                    Panel title
-                                </h3> 
-                            </div> 
-                            <div class="panel-body"> 
-                                Panel content 
-                            </div> 
-                        </div>
-                         <div class="panel panel-success"> 
-                            <div class="panel-heading"> 
-                                <h3 class="panel-title">
-                                    Panel title
-                                </h3> 
-                            </div> 
-                            <div class="panel-body"> 
-                                Panel content 
-                            </div> 
-                        </div>
-                         <div class="panel panel-success"> 
-                            <div class="panel-heading"> 
-                                <h3 class="panel-title">
-                                    Panel title
-                                </h3> 
-                            </div> 
-                            <div class="panel-body"> 
-                                Panel content 
-                            </div> 
-                        </div>
                         </div><!--End div#feedbackdata -->
                     </div>
                 </div><!--end div.innercontaine!-->
