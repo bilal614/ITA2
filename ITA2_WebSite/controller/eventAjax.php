@@ -1,6 +1,7 @@
 <?php 
     session_start();
-    include 'personalPage.php';
+    
+    if(!empty($_SESSION['userEmail'])){include 'personalPage.php';}
     require_once '../model/User.class.php';
     
     $favEventIds=array();

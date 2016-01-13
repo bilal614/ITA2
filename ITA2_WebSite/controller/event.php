@@ -4,9 +4,12 @@
     include '../view/event.view.php';
     require_once '../model/User.class.php';
     $email=$_SESSION['userEmail'];
-    $user = User::getUserAccount($email);
-    $user->getFavorites();
-    $favEvnts = $user->getAllFavoriteEvents();
+    
+    if(!empty($email)){
+        $user = User::getUserAccount($email);
+        $user->getFavorites();
+        $favEvnts = $user->getAllFavoriteEvents();
+    }
     
     function displayEvent()
     {
