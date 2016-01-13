@@ -41,6 +41,8 @@
         global $favoriteEvents;
         $size = sizeof($favoriteEvents);
         $allEvents = $favoriteEvents[0]->GetData();
+        if(!empty($allEvents))
+        {
         ?>
         <div class="item active">
                 <a href="#Film"><img src="<?php echo $allEvents['pictureLink'] ?>" alt="Film"></a>
@@ -68,6 +70,7 @@
             </div>
         </div>
         <?php
+        }
         }
     }
     
