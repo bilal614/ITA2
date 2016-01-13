@@ -62,6 +62,14 @@ INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES
 'The new year’s dive is cold, bold and the best way to start the year fresh.',
 '../templates/images/events/Winter/winter1.jpg');
 
+INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (7,'Netherlands Film Festival','23 September','Utrecht',
+'Watch a large variety of Dutch movies at the Netherlands Film Festival in Utrecht. From very famous to truly obscure and from features and documentaries to short films and TV…',
+'../templates/images/events/Autumn/autumn5.jpg');
+
+INSERT INTO Events(eventId, name, date, location,description,pictureLink) VALUES (8,'Portrait Gallery','9 Nov- 31 Dec','Amsterdam',
+'Thirty huge 17th-century group portraits from the collections of the Amsterdam Museum and the Rijksmuseum can be admired in Hermitage Amsterdam until the end of 2016…',
+'../templates/images/events/Autumn/autumn4.jpg');
+
 INSERT INTO itaUsers(email,password,username,signupDate) VALUES('bilalbutt.614@gmail.com','bilal123','Bilal', STR_TO_DATE('02-01-2015', '%d-%m-%Y'));
 INSERT INTO itaUsers(email,password,username,signupDate) VALUES('thanhhnk@gmail.com', '1234','thanhhnk', STR_TO_DATE('15-01-2015', '%d-%m-%Y'));
 

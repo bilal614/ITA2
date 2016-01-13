@@ -111,19 +111,26 @@
             }
             
             public function addToFavorites($eventID){
-            
-                $conn=parent::connect();
-                $sql ="INSERT INTO ".TBL_FAV. " (email,eventId) VALUES (:email, :eventId)";
-                try{
-                    $st=$conn->prepare($sql);
-                    $st->bindValue(":email",$this->data['email'],PDO::PARAM_STR);
-                    $st->bindValue(":eventId", $eventID,PDO::PARAM_INT);
-                    $st->execute();
-                    parent::disconnect($conn);
-                   } 
-                catch (PDOException $e){
-                       parent::disconnect($conn);
-                       die("Query failed: ".$e->getMessage()); }                
+                if(User::favoriteExists($eventID)==false)
+                    {
+                        $conn=parent::connect();
+                        $sql ="INSERT INTO ".TBL_FAV. " (email,eventId) VALUES (:email, :eventId)";
+                        try{
+                            $st=$conn->prepare($sql);
+                            $st->bindValue(":email",$this->data['email'],PDO::PARAM_STR);
+                            $st->bindValue(":eventId", $eventID,PDO::PARAM_INT);
+                    
+                            $st->execute();
+                            parent::disconnect($conn);
+                            return true;                 
+                        } 
+                        catch (PDOException $e){
+                            parent::disconnect($conn);
+                            die("Query failed: ".$e->getMessage()); }                      
+                    }else{
+                        parent::disconnect($conn);
+                        return false;
+                    }            
             }
             
             public function getFavorites(){//this function returns an array of eventId's that are listed in 
@@ -147,5 +154,25 @@
                     parent::disconnect($conn);
                     die("Query failed: ".$e->getMessage());
                     }
+            }
+            
+            public static function favoriteExists($id)
+            {
+                $conn=parent::connect();
+                $sql ="SELECT eventId FROM ".TBL_FAV. " WHERE eventId= :eventId;";
+                try{
+                    $st=$conn->prepare($sql);
+                    $st->bindValue(":eventId", $id,PDO::PARAM_INT);
+                    $st->execute();
+                    $row=$st->fetch();
+                    if(!empty($row)){
+                        return true;
+                    }else{return false;}
+                    parent::disconnect($conn);
+                   } 
+                catch (PDOException $e){
+                       parent::disconnect($conn);
+                       die("Query failed: ".$e->getMessage()); }
+                
             }
     }

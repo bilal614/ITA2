@@ -2,6 +2,12 @@
     session_start();
     include '../includes/common.inc.php';
     include '../view/event.view.php';
+    require_once '../model/User.class.php';
+    $email=$_SESSION['userEmail'];
+    $user = User::getUserAccount($email);
+    $user->getFavorites();
+    $favEvnts = $user->getAllFavoriteEvents();
+    
     function displayEvent()
     {
         if($_SESSION['autumn']) {
@@ -54,7 +60,11 @@
                                 <div class="timeLocation">23 Sept| Utrecht</div>
                                 <div class="eventContentD">Watch a large variety of Dutch movies at the Netherlands Film Festival in Utrecht. From very famous to truly obscure and from features and documentaries to short films and TV…</div>
                                 <div class ="addFavorite">
-                                    <a onclick="addFavortieEvent()">Add to favorite events</a>
+                                    <?php 
+                                    global $favEvnts;
+                                    if(!in_array('7', $favEvnts)){ ?>
+                                    <a onclick="return loadingRequest('7');">Add to favorite events</a>
+                                    <?php } ?>
                                     <span></span>
                                 </div>
                             </div>
@@ -66,7 +76,7 @@
                                     <div class="timeLocation">9 Nov - 31 Dec | Amsterdam</div>
                                     <div class="eventContentD">Thirty huge 17th-century group portraits from the collections of the Amsterdam Museum and the Rijksmuseum can be admired in Hermitage Amsterdam until the end of 2016…</div>
                                     <div class ="addFavorite">
-                                    <a onclick="addFavortieEvent()">Add to favorite events</a>
+                                    <a onclick="return loadingRequest('8');">Add to favorite events</a>
                                     <span></span>
                                 </div>
                                 </div>

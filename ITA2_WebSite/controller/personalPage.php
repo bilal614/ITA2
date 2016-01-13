@@ -3,13 +3,14 @@
     require_once '../model/User.class.php' ;
     require_once '../includes/common.inc.php' ;
     require_once '../model/Event.class.php';
-    
+
     
     if(isset($_SESSION['userEmail'])){
         $email = $_SESSION['userEmail'];
         $userAccount = User::getUserAccount($email);
         $infor = $userAccount->GetData();
         $_SESSION['username'] = $infor['username'];
+        
         $userAccount->getFavorites();
         $favoriteEventsIds = $userAccount->getAllFavoriteEvents();//array containing eventId's of all the events that are 
         //favorite events for the user
