@@ -84,6 +84,6 @@
         }
     }
     
-   include '../view/profile.view.php';
+    include '../view/profile.view.php';
         
 

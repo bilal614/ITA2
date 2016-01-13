@@ -21,6 +21,11 @@
         }
     }
     
+    function displayFavButton($eventID){
+       echo '<a href="#" onclick="return submitFavID('.$eventID.');">Add to favorite events</a>
+            <span></span>';
+    }
+    
     function displayAutumn()
     {
         ?>
@@ -52,8 +57,12 @@
                                 <div class="timeLocation">23 Sept| Utrecht</div>
                                 <div class="eventContentD">Watch a large variety of Dutch movies at the Netherlands Film Festival in Utrecht. From very famous to truly obscure and from features and documentaries to short films and TV…</div>
                                 <div class ="addFavorite"> 
-                                    <a href="#" onclick="return loadingRequest('7');">Add to favorite events</a>
-                                    <span></span>
+                                    <?php
+                                        if(!empty($_SESSION['userEmail']))
+                                        {
+                                            displayFavButton('7');
+                                        }
+                                    ?>
                                 </div>
                             </div>
                           </div>
@@ -63,10 +72,14 @@
                                     <div class="captionTitle">Portrait Gallery</div>
                                     <div class="timeLocation">9 Nov - 31 Dec | Amsterdam</div>
                                     <div class="eventContentD">Thirty huge 17th-century group portraits from the collections of the Amsterdam Museum and the Rijksmuseum can be admired in Hermitage Amsterdam until the end of 2016…</div>
-                                    <div class ="addFavorite">
-                                    <a href="#" onclick="return loadingRequest('8');">Add to favorite events</a>
-                                    <span></span>
-                                </div>
+                                    <div class ="addFavorite"> 
+                                    <?php
+                                        if(!empty($_SESSION['userEmail']))
+                                        {
+                                            displayFavButton('8');
+                                        }
+                                    ?>
+                                    </div>
                                 </div>
                           </div>
                         <!-- Left and right controls -->
@@ -118,9 +131,13 @@
                                 <div class="eventContentD">Pinkpop is a multi-day event with different stages 
                                 where (inter)national artists put on spectacular shows.Pinkpop is sold out almost 
                                 every year.</div>
-                                <div class ="addFavorite">
-                                <a href="#" onclick="return loadingRequest('1');">Add to favorite events</a>
-                                <span></span>
+                                <div class ="addFavorite"> 
+                                    <?php
+                                        if(!empty($_SESSION['userEmail']))
+                                        {
+                                            displayFavButton('1');
+                                        }
+                                    ?>
                                 </div>
                             </div>
                           </div>
@@ -132,9 +149,13 @@
                                     <div class="timeLocation">27 APR | Amsterdam</div>
                                     <div class="eventContentD">Participate in the national celebration on 27 April and 
                                             enjoy fun activities in every city! </div>
-                                    <div class ="addFavorite">
-                                    <a href="#" onclick="return loadingRequest('2');">Add to favorite events</a>
-                                    <span></span>
+                                    <div class ="addFavorite"> 
+                                    <?php
+                                        if(!empty($_SESSION['userEmail']))
+                                        {
+                                            displayFavButton('2');
+                                        }
+                                    ?>
                                     </div>
                                 </div>
                           </div>
@@ -185,10 +206,14 @@
                                 <div class="captionTitle">Keukenhof</div>
                                 <div class="timeLocation">24 Mar-16 May  | Lisse</div>
                                 <div class="eventContentD">The best place to see tulips in Holland is Keukenhof. Keukenhof is a park with 7 million flower bulbs surrounded by tulip fields.</div>
-                                <div class ="addFavorite">
-                                    <a href="#" onclick="return loadingRequest('3');">Add to favorite events</a>
-                                    <span></span>
-                                </div>
+                                 <div class ="addFavorite"> 
+                                    <?php
+                                        if(!empty($_SESSION['userEmail']))
+                                        {
+                                            displayFavButton('3');
+                                        }
+                                    ?>
+                                    </div>
                             </div>
                           </div>
                           <div class="item Easter">
@@ -198,9 +223,13 @@
                                     <div class="captionTitle">Easter In Holland</div>
                                     <div class="timeLocation">27-28 Mar | Netherlands tranditional events</div>
                                     <div class="eventContentD">Have Easter breakfast or a lovely brunch, attend a beautiful performance of the Matthäus Passion or spend some time strolling past the many stands at one of the Easter markets. Visit Holland during Easter and discover the many things to do.</div>
-                                    <div class ="addFavorite">
-                                    <a href="#" onclick="return addFavEvent('4');">Add to favorite events</a>
-                                    <span></span>
+                                     <div class ="addFavorite"> 
+                                    <?php
+                                        if(!empty($_SESSION['userEmail']))
+                                        {
+                                            displayFavButton('4');
+                                        }
+                                    ?>
                                     </div>
                                 </div>
                           </div>
@@ -250,9 +279,13 @@
                                 <div class="captionTitle">Amsterdam Light Festival</div>
                                 <div class="timeLocation">27 Nov-1 Feb  | Amsterdam</div>
                                 <div class="eventContentD">Discover the loveliest light art at Amsterdam Light Festival.</div>
-                                <div class ="addFavorite">
-                                    <a href="#" onclick="return loadingRequest('5');">Add to favorite events</a>
-                                    <span></span>
+                                 <div class ="addFavorite"> 
+                                    <?php
+                                        if(!empty($_SESSION['userEmail']))
+                                        {
+                                            displayFavButton('5');
+                                        }
+                                    ?>
                                 </div>
                             </div>
                           </div>
@@ -263,9 +296,13 @@
                                     <div class="captionTitle">Scheveningen New Year's Dive</div>
                                     <div class="timeLocation">1 Jan | Netherlands tranditional festival</div>
                                     <div class="eventContentD">The new year’s dive is cold, bold and the best way to start the year fresh. </div>
-                                    <div class ="addFavorite">
-                                    <a href="#" onclick="return loadingRequest('6');">Add to favorite events</a>
-                                    <span></span>
+                                     <div class ="addFavorite"> 
+                                    <?php
+                                        if(!empty($_SESSION['userEmail']))
+                                        {
+                                            displayFavButton('6');
+                                        }
+                                    ?>
                                     </div>
                                 </div>
                           </div>
