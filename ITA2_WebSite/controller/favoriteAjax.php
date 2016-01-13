@@ -1,5 +1,5 @@
 <?php
-    $favEventIds[] = array();
+    session_start();
     if($_POST['action']==8)
     {
         $favEventIds[]=8;

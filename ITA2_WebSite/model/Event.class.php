@@ -51,4 +51,28 @@ class Event extends DataObject {
                 return null;
             }
             
+            //return true if eventID is in the database
+             public static function checkEventID($eventID){
+                $conn=parent::connect();
+                $sql ="SELECT * FROM ".TBL_EVENT. " WHERE eventId= :eventId";
+                try{
+                    $st=$conn->prepare($sql);
+                    $st->bindValue(":eventId", $eventID,PDO::PARAM_STR);
+                    $st->execute();
+                    $row=$st->rowCount();
+                    parent::disconnect($conn);
+                    if($row != 0)
+                    {
+                        return true;
+                    }
+                    else 
+                    {
+                        return false;
+                    } 
+                }
+                catch(PDOException $e){
+                    parent::disconnect($conn);
+                    die("Query failed: ".$e->getMessage());
+                }
+            }
 }

@@ -22,7 +22,7 @@
     }
     
     function displayFavButton($eventID){
-       echo '<a href="#" onclick="return submitFavID('.$eventID.');">Add to favorite events</a>
+       echo '<a href="personalPage.php" onclick="return submitFavID('.$eventID.');">Add to favorite events</a>
             <span></span>';
     }
     

@@ -15,10 +15,13 @@
         if(!empty($_SESSION['favList']) && $_SESSION['favList'] != 0 )    
         {
             $favEventIds= $_SESSION['favList'];
-          
+            
             foreach($favEventIds as $fId)
             {
-                $userAccount->addToFavorites($fId);
+                if(Event::checkEventID($fId))
+                {
+                    $userAccount->addToFavorites($fId);
+                }
             }
         }
         
