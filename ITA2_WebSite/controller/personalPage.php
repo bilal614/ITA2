@@ -39,11 +39,24 @@
     {
         global $favoriteEvents;
         $size = sizeof($favoriteEvents);
-        for($i=0;$i<$size;$i++)
+        $allEvents = $favoriteEvents[0]->GetData();
+        ?>
+        <div class="item active">
+                <a href="#Film"><img src="<?php echo $allEvents['pictureLink'] ?>" alt="Film"></a>
+
+                <div class="eclassCaption" class="Desc">
+                <div class="orangeLine"></div>
+                <div class="scaptionTitle"><?php echo $allEvents["name"]; ?></div>
+                <div class="stimeLocation"><?php echo $allEvents['date'] ."|".$allEvents['location']; ?></div>
+                <div class="seventContentD"><?php echo $allEvents['description']; ?></div>
+            </div>
+        </div>
+        <?php
+        for($i=1;$i<$size;$i++)
         {
             $allEvents = $favoriteEvents[$i]->GetData();
         ?>
-        <div class="item active film">
+        <div class="item">
                 <a href="#Film"><img src="<?php echo $allEvents['pictureLink'] ?>" alt="Film"></a>
 
                 <div class="eclassCaption" class="Desc">

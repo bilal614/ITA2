@@ -46,7 +46,7 @@ class Contact extends DataObject {
                     $row=$st->fetchAll();
                     parent::disconnect($conn);
                     if(!empty($row)) {
-                        return $rows;
+                        return $row;
 
                     }
                 }  
