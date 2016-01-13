@@ -85,11 +85,11 @@
 //                   });
 //            });
 //        });
-function loadingRequest(season){
+function loadingRequest(event){
     $.ajax({
         url: 'eventAjax.php',
         type: 'post',
-        data:{ action :season },
+        data:{ action :event },
         success:function() {
           return true;
         },

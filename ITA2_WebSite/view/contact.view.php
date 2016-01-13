@@ -1,7 +1,4 @@
-<?php 
-    session_start();
-    include '../includes/common.inc.php';
-?>
+
 <!DOCTYPE html>
 <html>
     <?php displayHeadTag(); ?>
@@ -35,10 +32,11 @@
                                     <div class="desc" style = "color: #E36D01">Telephone</div>
                                     <div class="desc" style = "color: #E36D01">+31 8850 78127</div>
                             </div>
+                            <?php SentMessage(); ?>
                            <div id="contact-area">
-                                <form method="post" action="contactengine.php">
+                               <form id ="contactform" method="post" action="../controller/contact.php">
 
-                                    <input type="text" name="Name" id="Name" placeholder="Your name"/>
+                                    <input type="text" name="name" id="Name" placeholder="Your name"/>
 
 
                                     <input type="text" name="email" id="email" placeholder="Email" />
@@ -47,11 +45,11 @@
                                     <input type="text" name="subject" id="subject" placeholder="Subject"/>
 
 
-                                    <textarea name="Message" rows="20" cols="20" id="Message" placeholder="Message"></textarea>
+                                    <textarea name="message" rows="20" cols="20" id="Message" placeholder="Message"></textarea>
 
                                     <input type="submit" name="submit" value="Submit" class="submit-button" />
                                 </form>
-
+                                
                                 <div style="clear: both;"></div>		
                           </div>
                         </div><!--end div.rightcol!-->
@@ -59,6 +57,8 @@
                     <div id="feedbackContainer" style="clear: both;">
                         <div class="blackLine"></div>
                         <div class="CBdesc">Recent feedback</div>
+                        <div id="feedbackData">
+                        <?php displayMessages();?>
                         <div class="panel panel-success"> 
                             <div class="panel-heading"> 
                                 <h3 class="panel-title">
@@ -99,6 +99,7 @@
                                 Panel content 
                             </div> 
                         </div>
+                        </div><!--End div#feedbackdata -->
                     </div>
                 </div><!--end div.innercontaine!-->
             </div><!--End #container-->

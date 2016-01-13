@@ -56,7 +56,7 @@
                            <li ><a class="springEvent" href="controller/event.php" onclick = "return loadingRequest('loadSpring');">Spring events</a></li>
                        </ul>
                    </li>
-                   <li ><a class="contact" href="view/contact.php">Contact</a></li>
+                   <li ><a class="contact" href="controller/contact.php">Contact</a></li>
                 </ul>
                 </nav>
                 <div id="Login">

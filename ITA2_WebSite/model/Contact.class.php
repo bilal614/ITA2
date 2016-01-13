@@ -2,7 +2,7 @@
 
 require_once 'DataObject.class.php';
 
-class Event extends DataObject {
+class Contact extends DataObject {
             protected $data=array(
                 "messageID"=>"",
                 "email"=>"",
@@ -11,7 +11,7 @@ class Event extends DataObject {
                 "subject"=>"",
                 "sentDate"=>""
             );
-            
+            protected $messageInfors=array();
             public function sentFeedback(){
                 $conn=  parent::connect();
                 $sql="INSERT INTO ".TBL_CON. " (messageID,email,name,message,subject,sentDate)
@@ -29,27 +29,59 @@ class Event extends DataObject {
                 }catch(PDOException $e){
                     parent::disconnect($conn);
                     die("Query failed: ".$e->getMessage());
+                    return false;
                 }
+                return true;
             }
             
             //this method will return top 5 recent feedback
             public static function getRecentFeedback(){
                 //it will return a null
             $conn=parent::connect();
-            $sql ="SELECT * FROM".TBL_CON."ORDER BY SentDate LIMIT 5";
+            $sql ="SELECT * FROM ".TBL_CON." ORDER BY SentDate LIMIT 5";
     
             try{
-                $st=$conn->prepare($sql);
-                $st->execute();
-                $row=$st->fetch();
-                parent::disconnect($conn);
-                if(!empty($row)) 
-                {return new Event($row);}
-                }  catch (PDOException $e){
+                    $st=$conn->prepare($sql);
+                    $st->execute();
+                    $row=$st->fetchAll();
+                    parent::disconnect($conn);
+                    if(!empty($row)) {
+                        return $rows;
+
+                    }
+                }  
+                catch (PDOException $e){
                     parent::disconnect($conn);
                     die("Query failed: ".$e->getMessage());
                 }
                 return null;
+            }
+            
+            public static function generateUniqueId()
+            {
+                $x=  rand(11111, 99999);
+                $conn=  parent::connect();
+                $sql="SELECT MessageID FROM ".TBL_CON." WHERE MessageID=:x";
+                $row;
+                do{
+                try{
+                    $st=$conn->prepare($sql);
+                    $st->bindValue(":x", $x,PDO::PARAM_INT);
+                    $st->execute();
+                    $row=$st->fetch();
+                    if($row) 
+                    {
+                        $x=rand(11111,99999);
+                        $sql="SELECT MessageID FROM ".TBL_CON." WHERE MessageID=:x";
+                    }
+                    else{$row=null;}
+                    }  catch (PDOException $e){
+                    parent::disconnect($conn);
+                    die("Query failed: ".$e->getMessage());
+                    }
+                    }while(isset($row) && !empty($row));//$row!=null
+                    parent::disconnect($conn);
+                    return $x;
             }
             
 }
