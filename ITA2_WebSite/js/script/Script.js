@@ -99,18 +99,4 @@ function loadingRequest(event){
      }
     });  
 }
-function addFavEvent(eventID){
-    $.ajax({
-        url: 'personal.php',
-        type: 'post',
-        data:{ action :eventID },
-        success:function() {
-          return true;
-        },
-         error: function(xhr, desc, err) {
-         console.log(xhr);
-         console.log("Details: " + desc + "\nError:" + err);
-     }
-    });  
-}
 

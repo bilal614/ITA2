@@ -128,7 +128,6 @@
                             parent::disconnect($conn);
                             die("Query failed: ".$e->getMessage()); }                      
                     }else{
-                        parent::disconnect($conn);
                         return false;
                     }            
             }

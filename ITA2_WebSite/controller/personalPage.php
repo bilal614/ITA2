@@ -3,27 +3,24 @@
     require_once '../model/User.class.php' ;
     require_once '../includes/common.inc.php' ;
     require_once '../model/Event.class.php';
-
-    $favEventIds=array();
-    $favEventIds;
-    
-    
-    
-//    $email=$_SESSION['userEmail'];
-//    $userAcct= User::getUserAccount($email);
-//    
-//        if(!empty($email)){
-//        $user = User::getUserAccount($email);
-//        $user->getFavorites();
-//        $favEvnts = $user->getAllFavoriteEvents();
-//    }
-    
-    
+   
     if(isset($_SESSION['userEmail'])){
         $email = $_SESSION['userEmail'];
         $userAccount = User::getUserAccount($email);
         $infor = $userAccount->GetData();
         $_SESSION['username'] = $infor['username'];
+        
+                
+        //add to favorites
+        if(!empty($_SESSION['favList']) && $_SESSION['favList'] != 0 )    
+        {
+            $favEventIds= $_SESSION['favList'];
+          
+            foreach($favEventIds as $fId)
+            {
+                $userAccount->addToFavorites($fId);
+            }
+        }
         
         $userAccount->getFavorites();
         $favoriteEventsIds = $userAccount->getAllFavoriteEvents();//array containing eventId's of all the events that are 
@@ -42,8 +39,7 @@
         //Lasted time for visitor
         $year = 31536000 + time(); // 60seconds * 60 minutes * 24 hours * 365 days.s 
         setcookie('LastVisited',time(),$year);
-        
-        
+
     }
     else{
         echo "Opps! You need to login for this page!";
@@ -86,51 +82,6 @@
         <?php
         }
         }
-    }
-    
-    if($_POST['action']==8)
-    {
-        $favEventIds[]=8;
-    }
-    
-    if($_POST['action']==7)
-    {
-        $favEventIds[]=7;
-    }
-    
-    if($_POST['action']==6)
-    {
-        $favEventIds[]=6;
-    }
-    
-    if($_POST['action']==5)
-    {
-        $favEventIds[]=5;
-    }
-    
-    if($_POST['action']==4)
-    {
-        $favEventIds[]=4;
-    }
-    
-    if($_POST['action']==3)
-    {
-        $favEventIds[]=3;
-    }
-    
-    if($_POST['action']==2)
-    {
-        $favEventIds[]=2;
-    }
-    
-    if($_POST['action']==1)
-    {
-        $favEventIds[]=1;
-    }
-    
-    foreach($favEventIds as $fId)
-    {
-        $userAccount->addToFavorites($fId);
     }
     
    include '../view/profile.view.php';
