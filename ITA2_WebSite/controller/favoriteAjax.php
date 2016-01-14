@@ -2,7 +2,7 @@
     session_start();
     require_once '../model/User.class.php';
     require_once '../model/Event.class.php';
-    require_once '../view/event.view.php';
+
     if($_POST['action']==8)
     {
         $favEventId=8;
@@ -55,3 +55,4 @@
             $message = "Error! You already added it";
         }
     }
+    require_once '../view/event.view.php';
