@@ -111,14 +111,14 @@
             }
             
             public function addToFavorites($event){
-                if(User::favoriteExists($eventID,  $this->data['email'])==false)
+                if(User::favoriteExists($event,  $this->data['email'])==false)
                     {
                         $conn=parent::connect();
                         $sql ="INSERT INTO ".TBL_FAV. " (email,eventId) VALUES (:email, :eventId)";
                         try{
                             $st=$conn->prepare($sql);
                             $st->bindValue(":email", $this->data['email'],PDO::PARAM_STR);
-                            $st->bindValue(":eventId", $eventID,PDO::PARAM_INT);
+                            $st->bindValue(":eventId", $event,PDO::PARAM_INT);
                     
                             $st->execute();
                             parent::disconnect($conn);
@@ -143,7 +143,7 @@
                     $st->execute();
                     
                     $rows=$st->fetchAll(PDO::FETCH_COLUMN,'eventId');
-                    
+                    $this->favoriteEvents=array();
                     foreach($rows as $val){
                         $this->favoriteEvents[]=(integer)$val;
                     }
