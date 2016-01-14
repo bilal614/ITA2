@@ -12,7 +12,6 @@
         
                 
         
-        
         $userAccount->getFavorites();
         $favoriteEventsIds = $userAccount->getAllFavoriteEvents();//array containing eventId's of all the events that are 
         //favorite events for the user

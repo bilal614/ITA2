@@ -43,9 +43,10 @@
     }
     
     $email = $_SESSION['userEmail'];
+    $userAccount = User::getUserAccount($email);
     if(Event::checkEventID($favEventId))
     {
-        if(User::addToFavorites($favEventId, $email)){
+        if($userAccount->addToFavorites($favEventId)){
             DisplaySussess('This event is added to your favorite events');
         }
         else {
