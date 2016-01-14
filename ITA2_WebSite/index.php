@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    
     include 'includes/common.inc.php';
 ?>
 <!DOCTYPE html>
@@ -25,7 +26,7 @@
         <div id="mainContainer">
             <header>
                 <div id="leftLogo">
-                    <a href="index.view.php"><img id="logo" 
+                    <a href="index.php"><img id="logo" 
                                                   src="templates/images/index/logo.png" alt="ISNL">
                     </a>
                 </div>
@@ -61,9 +62,31 @@
                 </nav>
                 <div id="Login">
                     <div>
-                        <a id="btnLogin" href="controller/signIn.php">Login
-                        </a>
-                        <a id="btnSignUp" href="controller/signUp.php">Sign up</a>
+                       <?php  if(empty($_SESSION['userEmail']))
+                           {
+                            ?>
+                        <a id="btnLogin" href="controller/signIn.php">Login</a>
+                        <a id="btnSignUp" href="controller/signUp.php">Sign up</a> 
+                           <?php     
+                           } else{?>
+                        <div id="LoginSuccess">
+                                <div class="user-image-wrapper">
+                                    <img class="user-image" src="templates/images/index/user.png">
+                                </div>
+                                <div class="dropdown" id="name-wrapper">
+                                <div class="dropdown-toggle user-name-style"  data-toggle="dropdown">
+                                <?php
+                                echo $_SESSION['username'];
+                                ?>
+                                <span class="caret"></span></div>
+                                <ul class="dropdown-menu">
+                                    <li><a href="controller/personalPage.php">Favorite events</a></li>
+                                    <li><a href="controller/personalPage.php">Your profile</a></li>
+                                    <li><a id="btnLogOut" href="controller/logOut.php">Log out</a></li> 
+                                </ul>
+                                </div>
+                        </div>
+                           <?php } ?>
                     </div>
                 </div>
             </header>  
