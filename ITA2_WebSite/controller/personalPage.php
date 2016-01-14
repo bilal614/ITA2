@@ -11,19 +11,7 @@
         $_SESSION['username'] = $infor['username'];
         
                 
-        //add to favorites
-        if(!empty($_SESSION['favList']) && $_SESSION['favList'] != 0 )    
-        {
-            $favEventIds= $_SESSION['favList'];
-            
-            foreach($favEventIds as $fId)
-            {
-                if(Event::checkEventID($fId))
-                {
-                    $userAccount->addToFavorites($fId);
-                }
-            }
-        }
+        
         
         $userAccount->getFavorites();
         $favoriteEventsIds = $userAccount->getAllFavoriteEvents();//array containing eventId's of all the events that are 
