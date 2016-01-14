@@ -42,17 +42,16 @@
     {
         $favEventId=1;
     }
-    $message;
     $email = $_SESSION['userEmail'];
     $userAccount = User::getUserAccount($email);
     if(Event::checkEventID($favEventId))
     {
         if($userAccount->addToFavorites($favEventId)){
-            $message = "This event is added to your favorite events";
+            echo "This event is added to your favorite events";
             
         }
         else {
-            $message = "Error! You already added it";
+            echo "Error! You already added it";
         }
     }
-    require_once '../view/event.view.php';
+

@@ -44,6 +44,7 @@
         if(!empty($allEvents))
         {
         ?>
+        
         <div class="item active">
                 <a href="#Film"><img src="<?php echo $allEvents['pictureLink'] ?>" alt="Film"></a>
 

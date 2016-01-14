@@ -103,21 +103,14 @@ function submitFavID(eventID){
     $.ajax({
         url: 'favoriteAjax.php',
         type: 'post',
-        data:{ action :eventID },
-        success:function() {
-            //$("#content_popup").html(response);
-          return true;
+        data:{ action :eventID }, 
+        success:function(response) {
+          $("#content_popup").html(response);
         },
-         error: function(xhr, desc, err) {
-         console.log(xhr);
-         console.log("Details: " + desc + "\nError:" + err);
+        async:false, 
+        error: function(xhr, desc, err) {
+        console.log(xhr);
+        console.log("Details: " + desc + "\nError:" + err);
      }
-    });  
-   
+    }); 
 }
-
-//Display the popup for respone message
-$(document).ready(function() {
-    var options = { content : $('#content_popup') };
-    $('a.popup').popup(options);
-});

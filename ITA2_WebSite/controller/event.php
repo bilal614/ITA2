@@ -1,7 +1,6 @@
 <?php 
     session_start();
     include '../includes/common.inc.php';
-    include '../view/event.view.php';
     require_once '../model/User.class.php';
     //$email=$_SESSION['userEmail'];
     
@@ -22,7 +21,7 @@
     }
     
     function displayFavButton($eventID){
-       echo '<a class="popup" href="personalPage.php" onclick="return submitFavID('.$eventID.');">Add to favorite events</a>
+       echo '<a class="popup" href="#" onclick="submitFavID('.$eventID.');">Add to favorite events</a>
             <span></span>';
     }
     
@@ -322,3 +321,4 @@
                 </div><!--end div#innercontainer-->
         <?php
     }
+    include '../view/event.view.php';
