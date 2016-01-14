@@ -46,9 +46,23 @@
     if(Event::checkEventID($favEventId))
     {
         if(User::addToFavorites($favEventId, $email)){
-            echo 'Added';
+            DisplaySussess('This event is added to your favorite events');
         }
         else {
             echo "Error";
         }
+    }
+    
+    function DisplaySussess($message)
+    {
+        ?>
+            <div id="content_popup"><?php echo($message)?></div>
+            <script>
+                $(document).ready(function() {
+                    var options = { content : $('#content_popup') };
+                    $('a.popup').popup(options);
+                });
+            </script>
+        <?php
+
     }

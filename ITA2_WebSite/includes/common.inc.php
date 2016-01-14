@@ -17,6 +17,9 @@ function displayHeadTag(){
            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
            <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
            <script src="../js/jquery/jquery.validate.js"></script>
+           
+           <script src="../library/popupToddish/jquery.popup.min.js" type="text/javascript"></script>
+           <link href="../library/popupToddish/popup.css" rel="stylesheet" type="text/css"/>
     </head>
 <?php
 }

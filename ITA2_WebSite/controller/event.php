@@ -17,12 +17,12 @@
             displayWinter();
         }
         if($_SESSION['spring']){
-            displaySummer();
+            displaySpring();
         }
     }
     
     function displayFavButton($eventID){
-       echo '<a href="personalPage.php" onclick="return submitFavID('.$eventID.');">Add to favorite events</a>
+       echo '<a class="popup" href="personalPage.php" onclick="return submitFavID('.$eventID.');">Add to favorite events</a>
             <span></span>';
     }
     

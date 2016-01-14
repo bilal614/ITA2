@@ -114,3 +114,8 @@ function submitFavID(eventID){
     });  
 }
 
+//Popup show
+ $(document).ready(function() {
+    var options = { content : $('#content_popup') };
+    $('a.popup').popup(options);
+});
