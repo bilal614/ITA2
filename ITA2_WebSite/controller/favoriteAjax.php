@@ -2,6 +2,7 @@
     session_start();
     require_once '../model/User.class.php';
     require_once '../model/Event.class.php';
+    require_once '../view/event.view.php';
     if($_POST['action']==8)
     {
         $favEventId=8;
@@ -41,29 +42,16 @@
     {
         $favEventId=1;
     }
-    
+    $message;
     $email = $_SESSION['userEmail'];
     $userAccount = User::getUserAccount($email);
     if(Event::checkEventID($favEventId))
     {
         if($userAccount->addToFavorites($favEventId)){
-            DisplaySussess('This event is added to your favorite events');
+            $message = "This event is added to your favorite events";
+            
         }
         else {
-            echo "Error";
+            $message = "Error! You already added it";
         }
-    }
-    
-    function DisplaySussess($message)
-    {
-        ?>
-            <div id="content_popup"><?php echo($message)?></div>
-            <script>
-                $(document).ready(function() {
-                    var options = { content : $('#content_popup') };
-                    $('a.popup').popup(options);
-                });
-            </script>
-        <?php
-
     }

@@ -70,9 +70,10 @@
                            <?php     
                            } else{?>
                         <div id="LoginSuccess">
+                            <div>
                                 <div class="user-image-wrapper">
                                     <img class="user-image" src="templates/images/index/user.png">
-                                </div>
+                                </div
                                 <div class="dropdown" id="name-wrapper">
                                 <div class="dropdown-toggle user-name-style"  data-toggle="dropdown">
                                 <?php
@@ -85,6 +86,7 @@
                                     <li><a id="btnLogOut" href="controller/logOut.php">Log out</a></li> 
                                 </ul>
                                 </div>
+                            </div>
                         </div>
                            <?php } ?>
                     </div>

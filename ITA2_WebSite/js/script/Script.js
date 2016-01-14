@@ -105,6 +105,7 @@ function submitFavID(eventID){
         type: 'post',
         data:{ action :eventID },
         success:function() {
+            //$("#content_popup").html(response);
           return true;
         },
          error: function(xhr, desc, err) {
@@ -112,10 +113,11 @@ function submitFavID(eventID){
          console.log("Details: " + desc + "\nError:" + err);
      }
     });  
+   
 }
 
-//Popup show
- $(document).ready(function() {
+//Display the popup for respone message
+$(document).ready(function() {
     var options = { content : $('#content_popup') };
     $('a.popup').popup(options);
 });

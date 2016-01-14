@@ -8,6 +8,7 @@
                 displayHeader();
             ?>
             <div id="container">
+                <div id="content_popup" style="visibility: hidden;"><?php global $message; echo $message;?>  </div>
                 <?php
                     displayEvent();
                 ?>
