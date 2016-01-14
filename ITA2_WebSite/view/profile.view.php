@@ -32,8 +32,14 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
 
-                          <?php                                    
-                          DisplayFavoriteEvents()
+                          <?php
+                          global $favoriteEvents;
+                          if(!empty($favoriteEvents))
+                          {
+                            DisplayFavoriteEvents();
+                          }
+                          else{echo 'You have no favorite events added to you list at the moment. Please browse thorugh'
+                              . ' the website and select events that you like.';}
                           ?>
                         <!-- Left and right controls -->
                         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

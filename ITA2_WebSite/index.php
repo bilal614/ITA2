@@ -60,11 +60,11 @@
                    <li ><a class="contact" href="controller/contact.php">Contact</a></li>
                 </ul>
                 </nav>
-                <div id="Login">
-                    <div>
                        <?php  if(empty($_SESSION['userEmail']))
                            {
                             ?>
+                <div id="Login">
+                    <div>        
                         <a id="btnLogin" href="controller/signIn.php">Login</a>
                         <a id="btnSignUp" href="controller/signUp.php">Sign up</a> 
                            <?php     
