@@ -40,38 +40,58 @@
     {
         global $favoriteEvents;
         $size = sizeof($favoriteEvents);
-        $allEvents = $favoriteEvents[0]->GetData();
-        if(!empty($allEvents))
+        $count = 0;
+        if(!empty($favoriteEvents))
         {
-        ?>
-        
-        <div class="item active">
-                <a href="#Film"><img src="<?php echo $allEvents['pictureLink'] ?>" alt="Film"></a>
+            while($count < $size)
+            {
+                if(($size - $count) > 1)
+                {
+                    ?>
+                    <div class="item">
+                    <?php
+                    for($j = 0; $j < 2; ++$j)
+                    {
+                        $allEvents = $favoriteEvents[$count]->GetData();
+                        ?>
+                        <div class="sevstyle">
+                                <a href="#Film"><img src="<?php echo $allEvents['pictureLink'] ?>" alt="Film"></a>
 
-                <div class="eclassCaption" class="Desc">
-                <div class="orangeLine"></div>
-                <div class="scaptionTitle"><?php echo $allEvents["name"]; ?></div>
-                <div class="stimeLocation"><?php echo $allEvents['date'] ."|".$allEvents['location']; ?></div>
-                <div class="seventContentD"><?php echo $allEvents['description']; ?></div>
-            </div>
-        </div>
-        <?php
-        for($i=1;$i<$size;$i++)
-        {
-            $allEvents = $favoriteEvents[$i]->GetData();
-        ?>
-        <div class="item">
-                <a href="#Film"><img src="<?php echo $allEvents['pictureLink'] ?>" alt="Film"></a>
+                                <div class="eclassCaption" class="Desc">
+                                <div class="orangeLine"></div>
+                                <div class="scaptionTitle"><?php echo $allEvents["name"]; ?></div>
+                                <div class="stimeLocation"><?php echo $allEvents['date'] ."|".$allEvents['location']; ?></div>
+                                <div class="seventContentD"><?php echo $allEvents['description']; ?></div>
+                            </div>
+                        </div>
+                        <?php
+                        $count ++;
+                        
+                    }
+                    ?>
+                        </div>
+                    <?php
+                }
+                else
+                {
+                    $allEvents = $favoriteEvents[$count]->GetData();
+                     ?>
+                        <div class="item">
+                            <div class="sevstyle">
+                                    <a href="#Film"><img src="<?php echo $allEvents['pictureLink'] ?>" alt="Film"></a>
 
-                <div class="eclassCaption" class="Desc">
-                <div class="orangeLine"></div>
-                <div class="scaptionTitle"><?php echo $allEvents["name"]; ?></div>
-                <div class="stimeLocation"><?php echo $allEvents['date'] ."|".$allEvents['location']; ?></div>
-                <div class="seventContentD"><?php echo $allEvents['description']; ?></div>
-            </div>
-        </div>
-        <?php
-        }
+                                    <div class="eclassCaption" class="Desc">
+                                    <div class="orangeLine"></div>
+                                    <div class="scaptionTitle"><?php echo $allEvents["name"]; ?></div>
+                                    <div class="stimeLocation"><?php echo $allEvents['date'] ."|".$allEvents['location']; ?></div>
+                                    <div class="seventContentD"><?php echo $allEvents['description']; ?></div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                    $count ++;
+                }
+            }
         }
     }
     

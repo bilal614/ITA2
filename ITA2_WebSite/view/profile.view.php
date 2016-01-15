@@ -31,15 +31,22 @@
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
-
                           <?php
                           global $favoriteEvents;
                           if(!empty($favoriteEvents))
                           {
                             DisplayFavoriteEvents();
                           }
-                          else{echo 'You have no favorite events added to you list at the moment. Please browse thorugh'
-                              . ' the website and select events that you like.';}
+                          else{
+                              ?>
+                                <div class="alert alert-warning alert-dismissible fade in" role="alert"> 
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button> 
+                                    <strong>You have no favorite events added to you list at the moment.</strong> Please browse through our event pages and select events that you like. 
+                                </div>
+                              <?php
+                          }
                           ?>
                         <!-- Left and right controls -->
                         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -69,6 +76,12 @@
              displayFooter();
         ?>
     </div><!--end div#mainContainer!-->
-        
     </body>
+    <script>
+         $(document).ready(function() {
+                $("div.carousel-inner div.item:first-child").addClass( "active" );
+                $("div.item div.sevstyle:first-child").addClass("event1");
+                $("div.item div.sevstyle:first-child").next().addClass("event2");
+         });
+    </script>
 </html>
