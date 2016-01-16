@@ -10,7 +10,7 @@
             <div id="container">
                 <div class="login-form">
                     <h1>Sign Up</h1>
-                    <?php  Register();?>
+                    <div id="response" style="margin: 10px;"><?php  Register();?></div>
                     <form id="signupform" action="../controller/signUp.php" method="post" >
                         <!--onsubmit="return validateForm()" //this is for adding jquery validation!-->
                         <fieldset name="SignUpForm">                                                        
@@ -26,7 +26,7 @@
                             <label for="confirmpassword">Confirm Password: </label>
                             <input type="password" name="confirmpassword" required><br>
                             
-                            <input name="submitButton" type="submit" value="Submit">
+                            <input name="submitButton" type="submit" value="Submit" class="popup">
                             <!--<input type="reset" value="Reset">-->                 
                         </fieldset>
                     </form>
@@ -37,5 +37,13 @@
                displayFooter();
             ?>
         </div>
+<!--        <script>
+         $(document).ready(function( ) {
+             $( "#SignUpForm" ).submit(function(event) {
+                  $('div#response').addClass("success");
+                  event.preventDefault();
+            });
+         });
+        </script>-->
     </body>
 </html>

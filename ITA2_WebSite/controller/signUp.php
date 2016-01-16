@@ -61,7 +61,7 @@ function Register(){
         
         $newUser->register();
         $_SESSION['email']=$_POST['email'];
-        header('Location: signIn.php');  
+        echo '<div  style="padding: 10px;" class="bg-success" ><strong>Thank you! Your registration is successful!</strong>, please sign in and enjoy!</div>'  ;
         exit();
     }
     else {
